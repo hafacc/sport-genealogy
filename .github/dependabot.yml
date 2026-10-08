@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: bun
+    directory: /
+    schedule:
+      interval: monthly
+    ignore:
+      # other deps aren't ready for typescript 7 yet; revisit at 7.1
+      - dependency-name: typescript
+        versions: ["7.0.x"]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly

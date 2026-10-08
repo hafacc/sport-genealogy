@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  /* Nunito Sans is only downloaded by devices that lack Avenir Next */
+  --font-sans:
+    "Avenir Next", "Nunito Sans Variable", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+
+  /* the poster's palette; keep in step with src/lib/chart.ts */
+  --color-ink: #1d1b16;
+  --color-muted-ink: #6b665b;
+  --color-paper: #f6f1e4;
+  --color-grid-ink: #d9d2bf;
+
+  --shadow-card: 6px 6px 0 color-mix(in srgb, var(--color-ink) 14%, transparent);
+}
+
+html {
+  color-scheme: light;
+}

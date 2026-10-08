@@ -1,0 +1,3447 @@
+{
+  "copy": {
+    "title": "Sport Genealogy",
+    "description": "A family tree of ball sports: which game came from which, and when.",
+    "download": "Download the poster",
+    "wikipedia": "Wikipedia",
+    "close": "Close summary",
+    "legend": {
+      "descent": "Rules came from this sport",
+      "influence": "Borrowed something from this sport",
+      "disputed": "Historians disagree",
+      "approx": "Year is an estimate",
+      "ended": "No longer played"
+    }
+  },
+  "families": [
+    {
+      "id": "football",
+      "name": "Football",
+      "color": "#1f66c1"
+    },
+    {
+      "id": "stick-and-ball",
+      "name": "Stick and ball",
+      "color": "#d9541e"
+    },
+    {
+      "id": "court",
+      "name": "Hand and net",
+      "color": "#0f9a6a"
+    },
+    {
+      "id": "racket-and-wall",
+      "name": "Racket and wall",
+      "color": "#4a3aa7"
+    },
+    {
+      "id": "bat-and-ball",
+      "name": "Bat and ball",
+      "color": "#3f7d12"
+    },
+    {
+      "id": "target",
+      "name": "Aim and roll",
+      "color": "#c9457f"
+    }
+  ],
+  "sports": [
+    {
+      "id": "medieval-football",
+      "name": "Medieval football",
+      "family": "football",
+      "year": 1175,
+      "approx": true,
+      "ended": null,
+      "parents": [],
+      "note": "FitzStephen describes London Shrovetide ball play c.1174-83; first named in the 1314 London ban; survives as Ashbourne Shrovetide, Kirkwall Ba', Workington Uppies and Downies",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Medieval_football",
+        "https://en.wikipedia.org/wiki/Football"
+      ]
+    },
+    {
+      "id": "caid",
+      "name": "Caid",
+      "family": "football",
+      "year": 1308,
+      "approx": true,
+      "ended": 1885,
+      "parents": [],
+      "note": "football in Ireland first recorded 1308; caid as played in Kerry faded in the 1880s",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Caid_(sport)",
+        "https://en.wikipedia.org/wiki/Gaelic_football"
+      ]
+    },
+    {
+      "id": "rugby-school-football",
+      "name": "Rugby School football",
+      "family": "football",
+      "year": 1803,
+      "approx": false,
+      "ended": 1871,
+      "parents": [
+        {
+          "id": "medieval-football",
+          "kind": "descent",
+          "note": "school game grown from English folk football; Wikipedia says the folk games 'may be regarded as the ancestors of modern codes'",
+          "source": "https://en.wikipedia.org/wiki/Medieval_football"
+        }
+      ],
+      "note": "football established at the school by 1803; carrying allowed by the 1830s; first written rules 1845; absorbed into rugby union from 1871",
+      "sources": [
+        "https://en.wikipedia.org/wiki/History_of_rugby_union",
+        "https://en.wikipedia.org/wiki/Football"
+      ]
+    },
+    {
+      "id": "eton-field-game",
+      "name": "Eton field game",
+      "family": "football",
+      "year": 1840,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "medieval-football",
+          "kind": "descent",
+          "note": "school game grown from English folk football",
+          "source": "https://en.wikipedia.org/wiki/Medieval_football"
+        }
+      ],
+      "note": "match reports in the press from 1840; Eton's archivist dates first rules to 1847, other sources claim 1815",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Eton_field_game",
+        "https://en.wikipedia.org/wiki/Football"
+      ]
+    },
+    {
+      "id": "harrow-football",
+      "name": "Harrow football",
+      "family": "football",
+      "year": 1840,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "medieval-football",
+          "kind": "descent",
+          "note": "school game grown from English folk football",
+          "source": "https://en.wikipedia.org/wiki/Medieval_football"
+        }
+      ],
+      "note": "oldest surviving rules 1858; played earlier, date unknown",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Harrow_football"
+      ]
+    },
+    {
+      "id": "winchester-college-football",
+      "name": "Winchester College football",
+      "family": "football",
+      "year": 1650,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "medieval-football",
+          "kind": "descent",
+          "note": "began as an unstructured street game",
+          "source": "https://en.wikipedia.org/wiki/Winchester_College_football"
+        }
+      ],
+      "note": "street game in the 17th century; rules standardized by about 1825, printed 1863",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Winchester_College_football"
+      ]
+    },
+    {
+      "id": "cambridge-rules",
+      "name": "Cambridge rules football",
+      "family": "football",
+      "year": 1848,
+      "approx": false,
+      "ended": 1863,
+      "parents": [
+        {
+          "id": "eton-field-game",
+          "kind": "descent",
+          "note": "1848 rules were a compromise drawn up by old boys of Eton, Harrow, Rugby, Winchester and Shrewsbury",
+          "source": "https://en.wikipedia.org/wiki/Cambridge_Rules"
+        },
+        {
+          "id": "harrow-football",
+          "kind": "descent",
+          "note": "same 1848 compromise",
+          "source": "https://en.wikipedia.org/wiki/Cambridge_Rules"
+        },
+        {
+          "id": "rugby-school-football",
+          "kind": "descent",
+          "note": "same 1848 compromise",
+          "source": "https://en.wikipedia.org/wiki/Cambridge_Rules"
+        },
+        {
+          "id": "winchester-college-football",
+          "kind": "descent",
+          "note": "same 1848 compromise",
+          "source": "https://en.wikipedia.org/wiki/Cambridge_Rules"
+        }
+      ],
+      "note": "first compromise rules c.1838-42 (lost); 1848 rules (lost); 1856 text survives; 1863 version fed the FA laws",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Cambridge_Rules"
+      ]
+    },
+    {
+      "id": "sheffield-rules",
+      "name": "Sheffield rules football",
+      "family": "football",
+      "year": 1857,
+      "approx": false,
+      "ended": 1877,
+      "parents": [
+        {
+          "id": "rugby-school-football",
+          "kind": "influence",
+          "disputed": true,
+          "note": "Tony Collins shows textual overlap with the Rugby School rules of 1851; Adrian Harvey denies any public-school source and says the rules came from ideas current in wider society",
+          "source": "https://en.wikipedia.org/wiki/Sheffield_Rules"
+        },
+        {
+          "id": "medieval-football",
+          "kind": "descent",
+          "disputed": true,
+          "note": "local kicking games of Sheffield and nearby villages (Harvey's view)",
+          "source": "https://en.wikipedia.org/wiki/Sheffield_Rules"
+        }
+      ],
+      "note": "Sheffield FC founded 1857; rules written 1858 by Creswick and Prest; dropped for FA laws in 1877",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sheffield_Rules",
+        "https://en.wikipedia.org/wiki/Laws_of_the_Game_(association_football)"
+      ]
+    },
+    {
+      "id": "association-football",
+      "name": "Association football",
+      "family": "football",
+      "year": 1863,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "cambridge-rules",
+          "kind": "descent",
+          "note": "Morley put the 1863 Cambridge rules to the FA on 24 Nov 1863; they swung the vote against carrying and hacking and the offside law was taken almost verbatim",
+          "source": "https://en.wikipedia.org/wiki/Cambridge_Rules"
+        },
+        {
+          "id": "sheffield-rules",
+          "kind": "influence",
+          "note": "eight of the twelve FA law changes of 1863-70 came from Sheffield, plus the corner kick (1872); codes merged 1877",
+          "source": "https://en.wikipedia.org/wiki/Sheffield_Rules"
+        }
+      ],
+      "note": "FA founded 26 Oct 1863; laws published 8 Dec 1863",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Laws_of_the_Game_(association_football)",
+        "https://en.wikipedia.org/wiki/Football"
+      ]
+    },
+    {
+      "id": "rugby-union",
+      "name": "Rugby union",
+      "family": "football",
+      "year": 1871,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "rugby-school-football",
+          "kind": "descent",
+          "note": "first RFU laws written by three Old Rugbeian lawyers (Rutter, Holmes, Maton)",
+          "source": "https://en.wikipedia.org/wiki/History_of_rugby_union"
+        }
+      ],
+      "note": "Blackheath left the FA in 1863; RFU founded and laws approved June 1871",
+      "sources": [
+        "https://en.wikipedia.org/wiki/History_of_rugby_union"
+      ]
+    },
+    {
+      "id": "rugby-league",
+      "name": "Rugby league",
+      "family": "football",
+      "year": 1895,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "rugby-union",
+          "kind": "descent",
+          "note": "Northern Rugby Football Union broke from the RFU in 1895 over broken-time payments",
+          "source": "https://en.wikipedia.org/wiki/History_of_rugby_league"
+        }
+      ],
+      "note": "Northern Union split 29 Aug 1895; line-out abolished 1897; 13 players and play-the-ball 1906; named rugby league 1922",
+      "sources": [
+        "https://en.wikipedia.org/wiki/History_of_rugby_league",
+        "https://en.wikipedia.org/wiki/Rugby_league"
+      ]
+    },
+    {
+      "id": "australian-rules-football",
+      "name": "Australian rules football",
+      "family": "football",
+      "year": 1858,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "rugby-school-football",
+          "kind": "descent",
+          "note": "Wills learned the game at Rugby; founders stripped out hacking; Wills's biographer says he was 'almost solely influenced by his experience at Rugby School'; supported by Blainey, Sandercock, Turner, Collins",
+          "source": "https://en.wikipedia.org/wiki/Origins_of_Australian_rules_football"
+        },
+        {
+          "id": "eton-field-game",
+          "kind": "influence",
+          "note": "J. B. Thompson (1860, 1871): the committee weighed the Rugby, Eton, Harrow and Winchester rules",
+          "source": "https://en.wikipedia.org/wiki/Origins_of_Australian_rules_football"
+        },
+        {
+          "id": "harrow-football",
+          "kind": "influence",
+          "note": "named by Thompson in 1871 among the rules considered",
+          "source": "https://en.wikipedia.org/wiki/Origins_of_Australian_rules_football"
+        },
+        {
+          "id": "winchester-college-football",
+          "kind": "influence",
+          "note": "named by Thompson in 1871 among the rules considered",
+          "source": "https://en.wikipedia.org/wiki/Origins_of_Australian_rules_football"
+        }
+      ],
+      "note": "first recorded match 15 June 1858; Melbourne FC's ten rules drafted May 1859; running bounce 1866",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Australian_rules_football",
+        "https://en.wikipedia.org/wiki/Origins_of_Australian_rules_football"
+      ]
+    },
+    {
+      "id": "gaelic-football",
+      "name": "Gaelic football",
+      "family": "football",
+      "year": 1885,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "caid",
+          "kind": "descent",
+          "disputed": true,
+          "note": "traditional account; Garnham and most Irish historians say Gaelic football did not exist before the 1880s and the link is spurious",
+          "source": "https://en.wikipedia.org/wiki/Caid_(sport)"
+        },
+        {
+          "id": "australian-rules-football",
+          "kind": "influence",
+          "disputed": true,
+          "note": "Joe Lennon and Aaron Dunne find the 1885 rules copy the Victorian rules of 1866 and 1877, some nearly verbatim; Collins says the GAA 'hybridised Australian rules and soccer'; no archival proof of the borrowing",
+          "source": "https://en.wikipedia.org/wiki/Comparison_of_Gaelic_football_and_Australian_rules_football"
+        },
+        {
+          "id": "association-football",
+          "kind": "influence",
+          "disputed": true,
+          "note": "Collins: the GAA hybridised Australian rules and soccer to set the game apart from rugby",
+          "source": "https://en.wikipedia.org/wiki/Comparison_of_Gaelic_football_and_Australian_rules_football"
+        },
+        {
+          "id": "hurling",
+          "kind": "influence",
+          "note": "the first rules show the influence of hurling",
+          "source": "https://en.wikipedia.org/wiki/History_of_Gaelic_football"
+        }
+      ],
+      "note": "Davin's rules adopted by the GAA at Thurles 17 Jan 1885 (Wikipedia gives drawn up 1884, published in United Ireland 7 Feb 1887)",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Gaelic_football",
+        "https://en.wikipedia.org/wiki/History_of_Gaelic_football",
+        "https://gaacork.ie/history-of-gaa/"
+      ]
+    },
+    {
+      "id": "international-rules-football",
+      "name": "International rules football",
+      "family": "football",
+      "year": 1967,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "gaelic-football",
+          "kind": "descent",
+          "note": "compromise code for matches between Gaelic and Australian players",
+          "source": "https://en.wikipedia.org/wiki/International_rules_football"
+        },
+        {
+          "id": "australian-rules-football",
+          "kind": "descent",
+          "note": "same compromise",
+          "source": "https://en.wikipedia.org/wiki/International_rules_football"
+        }
+      ],
+      "note": "first Australia-Ireland tour games 1967; official series from 1984; last series 2017",
+      "sources": [
+        "https://en.wikipedia.org/wiki/International_rules_football"
+      ]
+    },
+    {
+      "id": "american-football",
+      "name": "American football",
+      "family": "football",
+      "year": 1876,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "rugby-union",
+          "kind": "descent",
+          "note": "Massasoit House convention of 1876 adopted rules based largely on the RFU code; Walter Camp's changes of 1880-83 turned it into a new game",
+          "source": "https://en.wikipedia.org/wiki/History_of_American_football"
+        },
+        {
+          "id": "association-football",
+          "kind": "influence",
+          "note": "college games of 1869-75 used rules based on the FA's 1863 laws; these were dropped for rugby in 1876, so nothing in today's rules comes down this line",
+          "source": "https://en.wikipedia.org/wiki/History_of_American_football"
+        }
+      ],
+      "note": "1869 Princeton-Rutgers game used FA-style rules; 1874 McGill showed Harvard rugby; rugby code adopted 23 Nov 1876; snap, scrimmage line and 11 players 1880; downs 1882; forward pass 1906",
+      "sources": [
+        "https://en.wikipedia.org/wiki/History_of_American_football",
+        "https://en.wikipedia.org/wiki/1874_Harvard_vs._McGill_football_game"
+      ]
+    },
+    {
+      "id": "canadian-football",
+      "name": "Canadian football",
+      "family": "football",
+      "year": 1861,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "rugby-school-football",
+          "kind": "descent",
+          "note": "grew from rugby football brought by British settlers and garrisons in the 1860s, before the RFU existed; stayed 'rugby football' in name until the Burnside rules",
+          "source": "https://en.wikipedia.org/wiki/Canadian_football"
+        }
+      ],
+      "note": "first documented game 9 Nov 1861 in Toronto; Canadian Rugby Football Union 1880; Burnside rules (12 men, snap-back, three downs) 1903, national by 1921; forward pass 1929",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Canadian_football",
+        "https://en.wikipedia.org/wiki/Burnside_rules"
+      ]
+    },
+    {
+      "id": "water-polo",
+      "name": "Water polo",
+      "family": "football",
+      "year": 1877,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "rugby-union",
+          "kind": "descent",
+          "disputed": true,
+          "note": "Wikipedia: began as 'a form of rugby football played in rivers and lakes', a wrestling, ball-carrying game; Scottish swimming archive says only that Wilson's handling game was modelled on football",
+          "source": "https://en.wikipedia.org/wiki/History_of_water_polo"
+        },
+        {
+          "id": "association-football",
+          "kind": "influence",
+          "note": "goal posts 'similar to those in football' and a throwing rather than carrying game came in with the Scottish rule changes of 1879",
+          "source": "https://scotswimarchive.scot/water-polo"
+        }
+      ],
+      "note": "'aquatic foot-ball match' reported 1857; William Wilson's rules for 'aquatic football' 1877 in Aberdeen; football-style goal posts by Oct 1879; Swimming Association of Great Britain rules 1885",
+      "sources": [
+        "https://en.wikipedia.org/wiki/History_of_water_polo",
+        "https://en.wikipedia.org/wiki/William_Wilson_(aquatics)",
+        "https://scotswimarchive.scot/water-polo"
+      ]
+    },
+    {
+      "id": "futsal",
+      "name": "Futsal",
+      "family": "football",
+      "year": 1930,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "association-football",
+          "kind": "descent",
+          "note": "ball-control rules taken from football",
+          "source": "https://en.wikipedia.org/wiki/Futsal"
+        },
+        {
+          "id": "basketball",
+          "kind": "influence",
+          "note": "five players a side and 40 minutes",
+          "source": "https://en.wikipedia.org/wiki/Futsal"
+        },
+        {
+          "id": "water-polo",
+          "kind": "influence",
+          "note": "goalkeeper rules",
+          "source": "https://en.wikipedia.org/wiki/Futsal"
+        },
+        {
+          "id": "field-handball",
+          "kind": "influence",
+          "note": "court and goal size",
+          "source": "https://en.wikipedia.org/wiki/Futsal"
+        },
+        {
+          "id": "field-hockey",
+          "kind": "influence",
+          "note": "substitution rules; the source says only 'hockey'",
+          "source": "https://en.wikipedia.org/wiki/Futsal"
+        }
+      ],
+      "note": "devised by Juan Carlos Ceriani in Montevideo 1930; first rulebook Sept 1933",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Futsal"
+      ]
+    },
+    {
+      "id": "beach-soccer",
+      "name": "Beach soccer",
+      "family": "football",
+      "year": 1940,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "association-football",
+          "kind": "descent",
+          "note": "rules are based on the Laws of the Game with modifications",
+          "source": "https://en.wikipedia.org/wiki/Beach_soccer"
+        }
+      ],
+      "note": "Rio neighborhood tournaments from 1940, first official tournament 1950; rules set 1992 in Los Angeles",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Beach_soccer"
+      ]
+    },
+    {
+      "id": "arena-football",
+      "name": "Arena football",
+      "family": "football",
+      "year": 1987,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "american-football",
+          "kind": "descent",
+          "note": "American football reworked for a hockey-sized indoor field with rebound nets",
+          "source": "https://en.wikipedia.org/wiki/Arena_football"
+        }
+      ],
+      "note": "conceived by Jim Foster 1981; first season 1987; patent filed 1990, expired 2007",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Arena_football"
+      ]
+    },
+    {
+      "id": "flag-football",
+      "name": "Flag football",
+      "family": "football",
+      "year": 1942,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "american-football",
+          "kind": "descent",
+          "note": "gridiron football with flag-pulling in place of tackling",
+          "source": "https://en.wikipedia.org/wiki/Flag_football"
+        }
+      ],
+      "note": "began on US military bases in the early 1940s (Fort Meade) as 'touch and tail football'; first national body in the 1960s; no single founding rulebook found",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Flag_football",
+        "https://en.wikipedia.org/wiki/Touch_football_(American)"
+      ]
+    },
+    {
+      "id": "touch",
+      "name": "Touch",
+      "family": "football",
+      "year": 1968,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "rugby-league",
+          "kind": "descent",
+          "note": "rugby league training game made into a sport by two South Sydney Junior Rugby League Club men",
+          "source": "https://en.wikipedia.org/wiki/Touch_(sport)"
+        }
+      ],
+      "note": "South Sydney Touch Football Club formed 13 July 1968 by Bob Dyke and Ray Vawdon",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Touch_(sport)"
+      ]
+    },
+    {
+      "id": "tag-rugby",
+      "name": "Tag rugby",
+      "family": "football",
+      "year": 1983,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "rugby-union",
+          "kind": "descent",
+          "note": "first played by the Gibraltar Rugby Football Union for lack of grass pitches; Leonard wrote his rules from a sailor's account of it",
+          "source": "https://en.wikipedia.org/wiki/Tag_rugby"
+        },
+        {
+          "id": "rugby-league",
+          "kind": "descent",
+          "note": "OzTag, started 1992 by league player Perry Haddock, follows rugby league",
+          "source": "https://en.wikipedia.org/wiki/Tag_rugby"
+        }
+      ],
+      "note": "Gibraltar cord-in-waistband game described by 1983; Nick Leonard's rules 1990, first festival 1991; OzTag 1992",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tag_rugby"
+      ]
+    },
+    {
+      "id": "wheelchair-rugby",
+      "name": "Wheelchair rugby",
+      "family": "football",
+      "year": 1976,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "basketball",
+          "kind": "influence",
+          "note": "made for players shut out of wheelchair basketball; played on a basketball court",
+          "source": "https://en.wikipedia.org/wiki/Wheelchair_rugby"
+        },
+        {
+          "id": "rugby-union",
+          "kind": "influence",
+          "note": "page lists elements from wheelchair basketball, ice hockey, handball and rugby union",
+          "source": "https://en.wikipedia.org/wiki/Wheelchair_rugby"
+        },
+        {
+          "id": "ice-hockey",
+          "kind": "influence",
+          "note": "same list",
+          "source": "https://en.wikipedia.org/wiki/Wheelchair_rugby"
+        },
+        {
+          "id": "handball",
+          "kind": "influence",
+          "note": "same list",
+          "source": "https://en.wikipedia.org/wiki/Wheelchair_rugby"
+        }
+      ],
+      "note": "created in Winnipeg in 1976 by five quadriplegic athletes as 'murderball'",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wheelchair_rugby"
+      ]
+    },
+    {
+      "id": "folk-hockey",
+      "name": "Folk hockey",
+      "family": "stick-and-ball",
+      "year": 1773,
+      "approx": false,
+      "ended": null,
+      "parents": [],
+      "note": "first sure use of the word is Richard Johnson's 'Juvenile Sports and Pastimes' (1773); the often-quoted 1363 proclamation is a mistranslation of 'canibucam'. Never had one rulebook; kept here as the unwritten ancestor of field hockey and bandy. Lytton in 1853 called it 'now very uncommon in England, except at schools'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Hockey",
+        "https://en.wikipedia.org/wiki/History_of_field_hockey"
+      ]
+    },
+    {
+      "id": "hurling",
+      "name": "Hurling",
+      "family": "stick-and-ball",
+      "year": 650,
+      "approx": true,
+      "ended": null,
+      "parents": [],
+      "note": "earliest written references are 7th-century Irish law tracts; word 'horlinge' in the 1366 Statute of Kilkenny; first written rules January 1883 by the Dublin Hurling Club; GAA founded 1884",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Hurling"
+      ]
+    },
+    {
+      "id": "camogie",
+      "name": "Camogie",
+      "family": "stick-and-ball",
+      "year": 1904,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "hurling",
+          "kind": "descent",
+          "note": "rules for a women's game drawn up from hurling in 1903",
+          "source": "https://en.wikipedia.org/wiki/Camogie"
+        }
+      ],
+      "note": "experimental rules drawn up 1903 by Maire Ni Chinneide and others; first matches 1904; started with 12 a side, a shorter match and a smaller field, moved to GAA field size and 15 a side in 1999",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Camogie"
+      ]
+    },
+    {
+      "id": "shinty",
+      "name": "Shinty",
+      "family": "stick-and-ball",
+      "year": 1879,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "hurling",
+          "kind": "descent",
+          "note": "shinty and hurling are described as sharing one Gaelic stick-and-ball game; no source opened gives a documented rule transfer",
+          "source": "https://en.wikipedia.org/wiki/Shinty"
+        }
+      ],
+      "note": "Wikipedia gives only 'pre-medieval origins'; first club 1861; first written rules 1879 (Glasgow Celtic Society cup) and 1880 (Strathglass Shinty Club); Camanachd Association unified them in 1893",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Shinty",
+        "https://www.strathglassshintyclub.co.uk/early-years/"
+      ]
+    },
+    {
+      "id": "field-hockey",
+      "name": "Field hockey",
+      "family": "stick-and-ball",
+      "year": 1849,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "folk-hockey",
+          "kind": "descent",
+          "note": "Teddington cricketers reworked the old English game on a cricket outfield with a cricket ball",
+          "source": "https://en.wikipedia.org/wiki/History_of_field_hockey"
+        }
+      ],
+      "note": "first known club Blackheath 1849; Teddington Hockey Club (cricket ball, striking circle, no sticks above the shoulder) had begun drawing up rules by 1874; a first association formed 1875 (Wikipedia's main article says 1876) and dissolved after about seven years; the present Hockey Association formed 1886. Blackheath refused the Teddington-line rules and left to found the National Hockey Union, which failed. So the modern rules are Teddington's, not Blackheath's.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/History_of_field_hockey",
+        "https://en.wikipedia.org/wiki/Field_hockey"
+      ]
+    },
+    {
+      "id": "indoor-hockey",
+      "name": "Indoor hockey",
+      "family": "stick-and-ball",
+      "year": 1950,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "field-hockey",
+          "kind": "descent",
+          "note": "field hockey moved into halls in Germany, with its own FIH rulebook",
+          "source": "https://en.wikipedia.org/wiki/Indoor_hockey"
+        }
+      ],
+      "note": "developed in Germany in the 1950s; German associations handed the rules to the FIH in 1966; FIH recognized it in 1968. Six a side, side boards, no hitting (push or deflect only).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Indoor_hockey"
+      ]
+    },
+    {
+      "id": "bandy",
+      "name": "Bandy",
+      "family": "stick-and-ball",
+      "year": 1813,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "folk-hockey",
+          "kind": "descent",
+          "note": "the English stick-and-ball game played on frozen fen meadows; the opened sources do not spell out the link",
+          "source": "https://en.wikipedia.org/wiki/Bandy"
+        }
+      ],
+      "note": "first recorded games on ice in the Fens in the frost of 1813-14; first published rules 1882 by Charles Goodman Tebbutt of Bury Fen; National Bandy Association 1891; a Russian version with its own rules ran from the 1890s until the Soviet Union took up the international rules in 1955",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Bandy"
+      ]
+    },
+    {
+      "id": "rink-bandy",
+      "name": "Rink bandy",
+      "family": "stick-and-ball",
+      "year": 1965,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "bandy",
+          "kind": "descent",
+          "note": "bandy cut down to fit an ice hockey rink",
+          "source": "https://en.wikipedia.org/wiki/Rink_bandy"
+        },
+        {
+          "id": "ice-hockey",
+          "kind": "influence",
+          "note": "played on the ice hockey rink, with hockey-style periods as an option",
+          "source": "https://en.wikipedia.org/wiki/Rink_bandy"
+        }
+      ],
+      "note": "began in Sweden in the 1960s when bandy players used the new indoor ice hockey rinks; six a side, bandy ball and sticks, no checking. No date for first written rules found.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rink_bandy"
+      ]
+    },
+    {
+      "id": "rinkball",
+      "name": "Rinkball",
+      "family": "stick-and-ball",
+      "year": 1965,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "rink-bandy",
+          "kind": "descent",
+          "note": "Wikipedia: 'Rink bandy has in turn led to the creation of the sport of rinkball'",
+          "source": "https://en.wikipedia.org/wiki/Bandy"
+        },
+        {
+          "id": "ice-hockey",
+          "kind": "influence",
+          "note": "described as combining bandy, rink bandy and ice hockey",
+          "source": "https://en.wikipedia.org/wiki/Rinkball"
+        }
+      ],
+      "note": "started in Sweden in the 1960s as a bandy practice drill on hockey rinks, reached Finland in the 1970s; first Finnish championship 1975 (used here as the codified date); International Rinkball Federation 1992",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rinkball",
+        "https://en.wikipedia.org/wiki/Bandy"
+      ]
+    },
+    {
+      "id": "ice-hockey",
+      "name": "Ice hockey",
+      "family": "stick-and-ball",
+      "year": 1875,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "field-hockey",
+          "kind": "descent",
+          "disputed": true,
+          "note": "Wikipedia 'History of ice hockey': six of the seven 1877 Gazette rules were 'largely based on six of the Hockey Association's twelve rules, with only minor differences (even the word ball was kept)'; the Creighton article calls them 'virtually identical to previously published field hockey rules'. The other view, also in the Creighton and first-indoor-game articles, is that he brought the informal Halifax game, which 'according to some historians' grew out of shinty; the Halifax Rules were only written down in 1943 and 'no contemporary sources confirm' them.",
+          "source": "https://en.wikipedia.org/wiki/History_of_ice_hockey"
+        },
+        {
+          "id": "bandy",
+          "kind": "influence",
+          "disputed": true,
+          "note": "Wikipedia 'Bandy': informal bandy in North America 'and elements from the early game had become absorbed into a new sport of ice hockey'. Not a rule-level borrowing; bandy's own rules (1882) are later than Montreal's (1877).",
+          "source": "https://en.wikipedia.org/wiki/Bandy"
+        }
+      ],
+      "note": "stick games on ice are older (Thames engraving 1796); the first documented organized game is Montreal, 3 March 1875 (SIHR: 'the earliest eyewitness account known of a specific game'); first rules printed in the Montreal Gazette, 27 February 1877",
+      "sources": [
+        "https://en.wikipedia.org/wiki/History_of_ice_hockey",
+        "https://en.wikipedia.org/wiki/First_indoor_ice_hockey_game",
+        "https://en.wikipedia.org/wiki/James_Creighton_(ice_hockey)",
+        "https://en.wikipedia.org/wiki/Halifax_Rules",
+        "https://en.wikipedia.org/wiki/Society_for_International_Hockey_Research"
+      ]
+    },
+    {
+      "id": "floor-hockey",
+      "name": "Floor hockey",
+      "family": "stick-and-ball",
+      "year": 1936,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "ice-hockey",
+          "kind": "descent",
+          "note": "Wikipedia: floor hockey codes 'derived from ice hockey', played as 'a playful variant of hockey' in gyms",
+          "source": "https://en.wikipedia.org/wiki/Floor_hockey"
+        }
+      ],
+      "note": "played in Canadian gyms from the early 20th century; first rules written by Sam Jacks at the West End YMCA, Toronto, in 1936 (straight sticks and a felt ring); plastic-stick 'Cosom' version from Battle Creek, Michigan, 1962; Special Olympics event from 1970",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Floor_hockey",
+        "https://en.wikipedia.org/wiki/Floorball"
+      ]
+    },
+    {
+      "id": "ringette",
+      "name": "Ringette",
+      "family": "stick-and-ball",
+      "year": 1963,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "floor-hockey",
+          "kind": "descent",
+          "note": "Jacks put his 1936 floor hockey game (bladeless stick, ring) on ice; the felt ring was soon swapped for a deck tennis ring",
+          "source": "https://en.wikipedia.org/wiki/Floor_hockey"
+        },
+        {
+          "id": "ice-hockey",
+          "kind": "influence",
+          "note": "played on a hockey rink, on skates, first by former high school hockey players",
+          "source": "https://en.wikipedia.org/wiki/Ringette"
+        }
+      ],
+      "note": "created 1963 by Sam Jacks (North Bay) and Red McCarthy (Espanola), Ontario; first game fall 1963; McCarthy's rules published 31 May 1965",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ringette",
+        "https://en.wikipedia.org/wiki/Floor_hockey"
+      ]
+    },
+    {
+      "id": "floorball",
+      "name": "Floorball",
+      "family": "stick-and-ball",
+      "year": 1968,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "floor-hockey",
+          "kind": "descent",
+          "note": "the game grew from American plastic-stick gym hockey (Cosom) taken up in Sweden; IFF names Cosom as the root",
+          "source": "https://archive.floorball.sport/this-is-floorball/history-in-short/"
+        },
+        {
+          "id": "bandy",
+          "kind": "influence",
+          "disputed": true,
+          "note": "Wikipedia: stick design 'is believed to have come from' bandy, and the Swedish and Finnish names mean 'indoor bandy'. Name and stick only; no bandy rule was taken over.",
+          "source": "https://en.wikipedia.org/wiki/Floorball"
+        }
+      ],
+      "note": "IFF: roots in the Cosom plastic sticks sold from Minneapolis from 1958; 'in the 1970s the floorball sport we play today was developed in Sweden'; first game usually placed in Gothenburg in 1968; basic rules 1979, official match rules 1981, IFF founded 1986",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Floorball",
+        "https://archive.floorball.sport/this-is-floorball/history-in-short/"
+      ]
+    },
+    {
+      "id": "roller-hockey",
+      "name": "Rink hockey",
+      "family": "stick-and-ball",
+      "year": 1878,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "polo",
+          "kind": "influence",
+          "note": "Wikipedia: 'first known as roller polo due to the introduction of polo in 1876, skaters took polo to the rinks'",
+          "source": "https://en.wikipedia.org/wiki/Roller_hockey_(quad)"
+        },
+        {
+          "id": "field-hockey",
+          "kind": "descent",
+          "note": "the modern game is described as combining field hockey and bandy on skates; no rule-level source opened",
+          "source": "https://en.wikipedia.org/wiki/Roller_hockey_(quad)"
+        }
+      ],
+      "note": "first recorded game 1878 at the Denmark Rink, London; first called roller polo; US National Roller Polo League 1882; first world championship 1936. No first-rules date found.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Roller_hockey_(quad)"
+      ]
+    },
+    {
+      "id": "inline-hockey",
+      "name": "Inline hockey",
+      "family": "stick-and-ball",
+      "year": 1938,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "ice-hockey",
+          "kind": "descent",
+          "note": "1940 rules taken from an NHL booklet",
+          "source": "https://en.wikipedia.org/wiki/Roller_in-line_hockey"
+        },
+        {
+          "id": "roller-hockey",
+          "kind": "influence",
+          "note": "grew inside the roller skating bodies that ran the ball game on quad skates",
+          "source": "https://en.wikipedia.org/wiki/Roller_in-line_hockey"
+        }
+      ],
+      "note": "newsreel of the game from Vienna, 1938; in 1940 the US rink operators' association published roller hockey rules 'drawn from a booklet by the National Hockey League'; inline-skate national title 1993, world championships 1995 (FIRS) and 1996 (IIHF). Four skaters, no blue lines.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Roller_in-line_hockey"
+      ]
+    },
+    {
+      "id": "indigenous-stickball",
+      "name": "Stickball",
+      "family": "stick-and-ball",
+      "year": 1637,
+      "approx": false,
+      "ended": null,
+      "parents": [],
+      "note": "first written account by the Jesuit Jean de Brebeuf among the Wendat, 1637; Wikipedia says the games go back to about 1100; still played, notably by the Mississippi Choctaw. Rules were agreed before each game; no first-written-rules date found.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Indigenous_North_American_stickball",
+        "https://en.wikipedia.org/wiki/Lacrosse"
+      ]
+    },
+    {
+      "id": "lacrosse",
+      "name": "Lacrosse",
+      "family": "stick-and-ball",
+      "year": 1856,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "indigenous-stickball",
+          "kind": "descent",
+          "note": "Beers 'codified the aboriginal game into modern lacrosse'; Montreal players learned it from the Mohawk of Kahnawake",
+          "source": "https://en.wikipedia.org/wiki/Indigenous_North_American_stickball"
+        }
+      ],
+      "note": "Montreal Lacrosse Club founded 1856; William George Beers's rules dated 1860 in one Wikipedia article and 1867 in another (1867 used: shorter game, fewer players, new stick, rubber ball)",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Lacrosse",
+        "https://en.wikipedia.org/wiki/History_of_lacrosse"
+      ]
+    },
+    {
+      "id": "box-lacrosse",
+      "name": "Box lacrosse",
+      "family": "stick-and-ball",
+      "year": 1922,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "lacrosse",
+          "kind": "descent",
+          "note": "field lacrosse moved indoors",
+          "source": "https://en.wikipedia.org/wiki/Box_lacrosse"
+        },
+        {
+          "id": "ice-hockey",
+          "kind": "influence",
+          "note": "created by NHL arena owners to fill hockey rinks in summer; the rink is the playing area",
+          "source": "https://en.wikipedia.org/wiki/Box_lacrosse"
+        }
+      ],
+      "note": "Paddy Brennan tried indoor games at Montreal's Mount Royal Arena in the early 1920s; hockey arena owners launched the International Lacrosse League in 1931; six a side on a rink floor",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Box_lacrosse"
+      ]
+    },
+    {
+      "id": "polo",
+      "name": "Polo",
+      "family": "stick-and-ball",
+      "year": -500,
+      "approx": true,
+      "ended": null,
+      "parents": [],
+      "note": "horseback game in Persia between the 6th century BCE and the 1st century CE; European club at Silchar 1859; Calcutta Polo Club 1862; Hurlingham drew up 'the first set of formal British rules in 1874'",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Polo"
+      ]
+    },
+    {
+      "id": "polocrosse",
+      "name": "Polocrosse",
+      "family": "stick-and-ball",
+      "year": 1939,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "polo",
+          "kind": "influence",
+          "note": "the English exercise used polo sticks fitted with netted squash-racket heads; one horse per player",
+          "source": "https://en.wikipedia.org/wiki/Polocrosse"
+        },
+        {
+          "id": "lacrosse",
+          "kind": "influence",
+          "note": "netted stick to carry and throw the ball",
+          "source": "https://en.wikipedia.org/wiki/Polocrosse"
+        }
+      ],
+      "note": "Mr and Mrs Edward Hirst of Sydney saw an indoor riding exercise at the National School of Equitation near London in 1938; first demonstration and first rule book at Ingleburn, 1939",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Polocrosse"
+      ]
+    },
+    {
+      "id": "cycle-polo",
+      "name": "Cycle polo",
+      "family": "stick-and-ball",
+      "year": 1891,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "polo",
+          "kind": "descent",
+          "note": "polo on bicycles, played on grass in chukkas",
+          "source": "https://en.wikipedia.org/wiki/Cycle_polo"
+        }
+      ],
+      "note": "invented 1891 in County Wicklow by Richard J. Mecredy; first match October 1891",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Cycle_polo"
+      ]
+    },
+    {
+      "id": "basketball",
+      "name": "Basketball",
+      "family": "court",
+      "year": 1891,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "association-football",
+          "kind": "influence",
+          "note": "Naismith reviewed rugby, lacrosse, soccer, football, hockey and baseball and took the soccer ball as the safest ball; only the ball is a documented borrowing",
+          "source": "https://en.wikipedia.org/wiki/James_Naismith"
+        }
+      ],
+      "note": "invented and 13 rules written by James Naismith, Springfield MA, December 1891",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Basketball",
+        "https://en.wikipedia.org/wiki/James_Naismith"
+      ]
+    },
+    {
+      "id": "six-on-six-basketball",
+      "name": "Six-on-six basketball",
+      "family": "court",
+      "year": 1892,
+      "approx": false,
+      "ended": 1995,
+      "parents": [
+        {
+          "id": "basketball",
+          "kind": "descent",
+          "note": "Berenson modified Naismith's rules: court split into zones players could not leave, dribble limit, no snatching",
+          "source": "https://en.wikipedia.org/wiki/Senda_Berenson_Abbott"
+        }
+      ],
+      "note": "Senda Berenson's three-zone women's rules at Smith College 1892, adopted 1899, published by Spalding 1901; six-player two-court form from 1938; US colleges moved to five-player full court 1971; last state (Oklahoma) dropped it 1995",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Six-on-six_basketball",
+        "https://en.wikipedia.org/wiki/Senda_Berenson_Abbott",
+        "https://en.wikipedia.org/wiki/Women%27s_basketball"
+      ]
+    },
+    {
+      "id": "netball",
+      "name": "Netball",
+      "family": "court",
+      "year": 1893,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "basketball",
+          "kind": "descent",
+          "note": "Osterberg introduced basketball to her students 1893; an American lecturer, Dr Toles, taught it more formally 1895; moved outdoors onto grass with netted rings",
+          "source": "https://en.wikipedia.org/wiki/History_of_netball"
+        },
+        {
+          "id": "six-on-six-basketball",
+          "kind": "influence",
+          "note": "American women's rules (zones) were brought in by the American teacher Miss Porter in 1897",
+          "source": "https://en.wikipedia.org/wiki/History_of_netball"
+        }
+      ],
+      "note": "basketball played at Martina Bergman-Osterberg's London college from 1893; called net ball from 1897; first codified rules by the Ling Association 1901 (History of netball says 1900 or 1901)",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Netball",
+        "https://en.wikipedia.org/wiki/History_of_netball"
+      ]
+    },
+    {
+      "id": "ringboll",
+      "name": "Ringboll",
+      "family": "court",
+      "year": 1901,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "six-on-six-basketball",
+          "kind": "descent",
+          "note": "Dutch Wikipedia states ringboll was itself derived from women's basketball; no primary source opened",
+          "source": "https://nl.wikipedia.org/wiki/Korfbal"
+        }
+      ],
+      "note": "Swedish mixed-sex school game with a ring on a 3 m pole and a three-zone field; seen by Broekhuysen at Naas in 1901 or 1902; own origin date not found",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Korfball",
+        "https://nl.wikipedia.org/wiki/Korfbal"
+      ]
+    },
+    {
+      "id": "korfball",
+      "name": "Korfball",
+      "family": "court",
+      "year": 1902,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "ringboll",
+          "kind": "descent",
+          "note": "Broekhuysen simplified ringboll and replaced the ring with a basket; kept zones and mixed teams",
+          "source": "https://en.wikipedia.org/wiki/Nico_Broekhuysen"
+        }
+      ],
+      "note": "created by Amsterdam teacher Nico Broekhuysen 1902; Dutch association founded 2 June 1903; the Korfball article dates his Naas course to 1901, the Broekhuysen article to 1902",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Korfball",
+        "https://en.wikipedia.org/wiki/Nico_Broekhuysen"
+      ]
+    },
+    {
+      "id": "volleyball",
+      "name": "Volleyball",
+      "family": "court",
+      "year": 1895,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "lawn-tennis",
+          "kind": "influence",
+          "note": "Morgan's own account, quoted by the FIVB: tennis was rejected for its equipment 'but the idea of a net seemed a good one'",
+          "source": "https://www.fivb.com/volleyball/the-game/history/"
+        },
+        {
+          "id": "basketball",
+          "kind": "influence",
+          "note": "designed as a gentler alternative to basketball; first ball tried was a basketball bladder, then the basketball itself (FIVB quoting Morgan)",
+          "source": "https://www.fivb.com/volleyball/the-game/history/"
+        },
+        {
+          "id": "american-handball",
+          "kind": "influence",
+          "note": "Wikipedia: Morgan examined the rules of handball (the American wall game, not team handball, which did not exist in 1895); which element he took is not stated",
+          "source": "https://en.wikipedia.org/wiki/Volleyball"
+        },
+        {
+          "id": "fistball",
+          "kind": "influence",
+          "disputed": true,
+          "note": "German reference works (wissen.de) say volleyball was developed under the influence of Faustball; the FIVB history, Morgan's quoted account and English and German Wikipedia do not mention it",
+          "source": "https://www.wissen.de/lexikon/volleyball"
+        },
+        {
+          "id": "newcomb-ball",
+          "kind": "influence",
+          "disputed": true,
+          "note": "a 1996 academic article speculated Newcomb ball preceded and influenced volleyball; Wikipedia otherwise treats the two 1895 inventions as independent",
+          "source": "https://en.wikipedia.org/wiki/Newcomb_ball"
+        }
+      ],
+      "note": "invented as mintonette by William G. Morgan, Holyoke YMCA, 1895; renamed and printed in the YMCA handbook 1896",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Volleyball",
+        "https://en.wikipedia.org/wiki/William_G._Morgan",
+        "https://www.fivb.com/volleyball/the-game/history/",
+        "https://newenglandhistoricalsociety.com/1895-william-morgan-invents-mintonette/"
+      ]
+    },
+    {
+      "id": "beach-volleyball",
+      "name": "Beach volleyball",
+      "family": "court",
+      "year": 1915,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "volleyball",
+          "kind": "descent",
+          "note": "indoor game moved to sand; hardened into two-a-side on a smaller court with stricter setting rules and block counting as a touch",
+          "source": "https://en.wikipedia.org/wiki/Beach_volleyball"
+        }
+      ],
+      "note": "probably first played at the Outrigger Canoe Club, Waikiki, 1915; first recorded doubles game Santa Monica 1930; first FIVB-sanctioned tournament 1987 (used as codification date); Olympic 1996",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Beach_volleyball"
+      ]
+    },
+    {
+      "id": "newcomb-ball",
+      "name": "Newcomb ball",
+      "family": "court",
+      "year": 1895,
+      "approx": false,
+      "ended": null,
+      "parents": [],
+      "note": "invented by Clara Gregory Baer at Sophie Newcomb College, New Orleans, 1895; rivaled volleyball into the 1920s; still played recreationally",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Newcomb_ball"
+      ]
+    },
+    {
+      "id": "fistball",
+      "name": "Fistball",
+      "family": "court",
+      "year": 240,
+      "approx": false,
+      "ended": null,
+      "parents": [],
+      "note": "earliest written mention attributed to Gordian III, 240 CE; Italian rules by Antonio Scaino 1555; brought to Germany by Georg Weber 1870; first competitive rules by Weber and Heinrich Schnell 1894",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Fistball"
+      ]
+    },
+    {
+      "id": "sepak-raga",
+      "name": "Sepak raga",
+      "family": "court",
+      "year": 1450,
+      "approx": true,
+      "ended": null,
+      "parents": [],
+      "note": "circle kicking game with a rattan ball, recorded in the Malay Annals for the 15th-century Malacca Sultanate; no single rulebook; still played",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sepak_raga",
+        "https://en.wikipedia.org/wiki/Sepak_takraw"
+      ]
+    },
+    {
+      "id": "sepak-takraw",
+      "name": "Sepak takraw",
+      "family": "court",
+      "year": 1935,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "sepak-raga",
+          "kind": "descent",
+          "note": "the traditional circle game given a net and two opposing sides",
+          "source": "https://en.wikipedia.org/wiki/Sepak_takraw"
+        },
+        {
+          "id": "badminton",
+          "kind": "influence",
+          "note": "played on a badminton doubles court; the 1945 Penang version used 'a net and tenets like badminton'",
+          "source": "https://en.wikipedia.org/wiki/Sepak_takraw"
+        }
+      ],
+      "note": "first played over a net on a badminton court at Seremban 1935; net rules presented in Penang 1945 as sepak raga jaring; rules and name standardized by Malaya, Singapore, Myanmar and Thailand in Kuala Lumpur 1960",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sepak_takraw",
+        "https://en.wikipedia.org/wiki/Sepak_raga"
+      ]
+    },
+    {
+      "id": "footvolley",
+      "name": "Footvolley",
+      "family": "court",
+      "year": 1965,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "beach-volleyball",
+          "kind": "descent",
+          "note": "field rules are based on beach volleyball rules",
+          "source": "https://en.wikipedia.org/wiki/Footvolley"
+        },
+        {
+          "id": "association-football",
+          "kind": "influence",
+          "note": "ball-touch rules taken from association football",
+          "source": "https://en.wikipedia.org/wiki/Footvolley"
+        }
+      ],
+      "note": "created by Octavio de Moraes on Copacabana beach, 1965",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Footvolley"
+      ]
+    },
+    {
+      "id": "teqball",
+      "name": "Teqball",
+      "family": "court",
+      "year": 2014,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "association-football",
+          "kind": "influence",
+          "note": "played with a football using football touches",
+          "source": "https://en.wikipedia.org/wiki/Teqball"
+        },
+        {
+          "id": "table-tennis",
+          "kind": "influence",
+          "note": "played over a curved table in table-tennis fashion",
+          "source": "https://en.wikipedia.org/wiki/Teqball"
+        }
+      ],
+      "note": "created in Hungary 2014 by Gabor Borsanyi, Gyorgy Gattyan and Viktor Huszar; governed by FITEQ",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Teqball"
+      ]
+    },
+    {
+      "id": "ecua-volley",
+      "name": "Ecua-volley",
+      "family": "court",
+      "year": 1944,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "volleyball",
+          "kind": "descent",
+          "note": "described as a variant of volleyball invented in Ecuador",
+          "source": "https://en.wikipedia.org/wiki/Ecua-volley"
+        }
+      ],
+      "note": "Ecuadorian three-a-side game with a football, a 2.8 m net and brief holding allowed; organized neighborhood tournaments from 1944",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ecua-volley"
+      ]
+    },
+    {
+      "id": "roundnet",
+      "name": "Roundnet",
+      "family": "court",
+      "year": 1989,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "volleyball",
+          "kind": "influence",
+          "note": "inspired primarily by concepts from volleyball (three touches, spike)",
+          "source": "https://en.wikipedia.org/wiki/Roundnet"
+        }
+      ],
+      "note": "created by Jeff Knurek 1989; governed by the International Roundnet Federation",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Roundnet"
+      ]
+    },
+    {
+      "id": "danish-handball",
+      "name": "Håndbold",
+      "family": "court",
+      "year": 1897,
+      "approx": false,
+      "ended": null,
+      "parents": [],
+      "note": "R. N. Ernst played it with pupils at Nyborg 1897; Holger Nielsen at Ordrup from 1898, his rules published 1906 (German Wikipedia dates his rules 1898); absorbed into the international indoor game",
+      "sources": [
+        "https://da.wikipedia.org/wiki/H%C3%A5ndbold",
+        "https://en.wikipedia.org/wiki/Handball",
+        "https://de.wikipedia.org/wiki/Handball"
+      ]
+    },
+    {
+      "id": "torball",
+      "name": "Torball",
+      "family": "court",
+      "year": 1915,
+      "approx": false,
+      "ended": 1919,
+      "parents": [],
+      "note": "women's game invented by Max Heiser, Berlin, 1915; renamed Handball with formal rules on 29 October 1917; superseded by Schelenz's version from 1919",
+      "sources": [
+        "https://de.wikipedia.org/wiki/Handball",
+        "https://en.wikipedia.org/wiki/Handball"
+      ]
+    },
+    {
+      "id": "field-handball",
+      "name": "Field handball",
+      "family": "court",
+      "year": 1919,
+      "approx": false,
+      "ended": 1975,
+      "parents": [
+        {
+          "id": "torball",
+          "kind": "descent",
+          "note": "Schelenz added dribbling, allowed contact and shrank the ball",
+          "source": "https://de.wikipedia.org/wiki/Handball"
+        },
+        {
+          "id": "association-football",
+          "kind": "influence",
+          "note": "Schelenz took the playing field, team size and referees from football",
+          "source": "https://de.wikipedia.org/wiki/Handball"
+        }
+      ],
+      "note": "Carl Schelenz's 1919 revision of Heiser's rules: eleven a side on a football field; Olympic 1936; last world championship 1966; last German championship 1975; survives only in youth summer tournaments",
+      "sources": [
+        "https://de.wikipedia.org/wiki/Handball",
+        "https://en.wikipedia.org/wiki/Field_handball",
+        "https://de.wikipedia.org/wiki/Feldhandball"
+      ]
+    },
+    {
+      "id": "handball",
+      "name": "Handball",
+      "family": "court",
+      "year": 1935,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "field-handball",
+          "kind": "descent",
+          "disputed": true,
+          "note": "English Wikipedia calls the 1917 Berlin rules (Heiser, Schelenz, Konigh), revised 1919, 'the modern set of rules'; German Wikipedia derives the indoor game from Schelenz's rules",
+          "source": "https://en.wikipedia.org/wiki/Handball"
+        },
+        {
+          "id": "danish-handball",
+          "kind": "descent",
+          "disputed": true,
+          "note": "Nielsen's 1906 rules are the first written rules and were seven a side; German Wikipedia credits Denmark and Sweden with developing the indoor game; sources differ on whether the Danish or the German rules are the main line",
+          "source": "https://de.wikipedia.org/wiki/Handball"
+        }
+      ],
+      "note": "seven-a-side indoor game; first official indoor international Denmark v Sweden, 8 March 1935; Olympic 1972. The sport's conventional birthday is 29 October 1917 (Heiser's Berlin rules); date of the first international indoor rulebook was not verified",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Handball",
+        "https://de.wikipedia.org/wiki/Handball",
+        "https://da.wikipedia.org/wiki/H%C3%A5ndbold"
+      ]
+    },
+    {
+      "id": "beach-handball",
+      "name": "Beach handball",
+      "family": "court",
+      "year": 1992,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "handball",
+          "kind": "descent",
+          "note": "handball moved to sand: four a side, two sets, two-point spectacular goals, shootout tiebreak",
+          "source": "https://www.ihf.info/media-center/news/evolution-discipline-sport-beach-handball-and-ihf"
+        }
+      ],
+      "note": "first played on Ponza, Italy, 20 June 1992 (Gianni Buttarelli, Franco Schiano); rules reworked that year by Masi, Di Piero and Bartolini; IHF recognition May 1994",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Beach_handball",
+        "https://www.ihf.info/media-center/news/evolution-discipline-sport-beach-handball-and-ihf"
+      ]
+    },
+    {
+      "id": "tchoukball",
+      "name": "Tchoukball",
+      "family": "court",
+      "year": 1970,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "handball",
+          "kind": "influence",
+          "note": "played with the hands and a handball-like ball",
+          "source": "https://en.wikipedia.org/wiki/Tchoukball"
+        },
+        {
+          "id": "volleyball",
+          "kind": "influence",
+          "note": "defending team must keep the ball from landing",
+          "source": "https://en.wikipedia.org/wiki/Tchoukball"
+        }
+      ],
+      "note": "devised by Hermann Brandt in Switzerland in the 1960s; first played 1970; federation 1971",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tchoukball",
+        "https://fitb.org/tchoukball/history"
+      ]
+    },
+    {
+      "id": "quadball",
+      "name": "Quadball",
+      "family": "court",
+      "year": 2005,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "rugby-union",
+          "kind": "influence",
+          "note": "US Quadball describes the sport as a mix of elements from rugby, dodgeball and tag (tackling)",
+          "source": "https://www.usquadball.org/about/how-to-play"
+        }
+      ],
+      "note": "created at Middlebury College 2005 by Xander Manshel and Alex Benepe from the fictional game; renamed quadball July 2022",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Quadball",
+        "https://www.usquadball.org/about/how-to-play"
+      ]
+    },
+    {
+      "id": "jeu-de-paume",
+      "name": "Jeu de paume",
+      "family": "racket-and-wall",
+      "year": 1200,
+      "approx": true,
+      "ended": null,
+      "parents": [],
+      "note": "Hand game in France from around the 12th century; earliest picture c. 1300. Bats then rackets were standard by the late 17th century, after which the racket game (real tennis) carried on. Wikipedia treats the name as still in use for real tennis in France, so the end year is a judgment call.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jeu_de_paume",
+        "https://en.wikipedia.org/wiki/Real_tennis"
+      ]
+    },
+    {
+      "id": "real-tennis",
+      "name": "Real tennis",
+      "family": "racket-and-wall",
+      "year": 1500,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "jeu-de-paume",
+          "kind": "descent",
+          "note": "Wikipedia: evolved over three centuries from the racketless ball game played in France from around the 12th century.",
+          "source": "https://en.wikipedia.org/wiki/Real_tennis"
+        }
+      ],
+      "note": "By the 16th century the glove had become a racket and play had moved to an enclosed court; first rules by Forbet published 1599.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Real_tennis",
+        "https://en.wikipedia.org/wiki/Jeu_de_paume"
+      ]
+    },
+    {
+      "id": "valencian-pilota",
+      "name": "Valencian pilota",
+      "family": "racket-and-wall",
+      "year": 1391,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "jeu-de-paume",
+          "kind": "descent",
+          "note": "Wikipedia: 'commonly supposed to have been derived from the medieval jeu de paume'; Joan Lluis Vives (16th c.) called the two games the same.",
+          "source": "https://en.wikipedia.org/wiki/Valencian_pilota"
+        }
+      ],
+      "note": "Valencia city council banned street play on 14 June 1391. No year for first written rules or federation found.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Valencian_pilota"
+      ]
+    },
+    {
+      "id": "basque-pelota",
+      "name": "Basque pelota",
+      "family": "racket-and-wall",
+      "year": 1800,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "jeu-de-paume",
+          "kind": "descent",
+          "note": "Wikipedia: after jeu de paume declined around 1700, Basque local forms (pasaka, laxoa) turned into pelota.",
+          "source": "https://en.wikipedia.org/wiki/Basque_pelota"
+        }
+      ],
+      "note": "First recorded matches in Napoleonic times (historian Chipitey Etcheto); first official competitions in the 1920s. Wall play replaced face-to-face play during the 19th century.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Basque_pelota"
+      ]
+    },
+    {
+      "id": "jai-alai",
+      "name": "Jai alai",
+      "family": "racket-and-wall",
+      "year": 1875,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "basque-pelota",
+          "kind": "descent",
+          "note": "Wikipedia: 'a variation of Basque pelota', known in the Basque Country as zesta-punta.",
+          "source": "https://en.wikipedia.org/wiki/Jai_alai"
+        }
+      ],
+      "note": "Long basket credited to 'Gantxiki' around 1850; name 'jai alai' coined by Serafin Baroja in 1875; first US fronton in St. Louis c. 1904.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jai_alai",
+        "https://en.wikipedia.org/wiki/Basque_pelota"
+      ]
+    },
+    {
+      "id": "frontenis",
+      "name": "Frontenis",
+      "family": "racket-and-wall",
+      "year": 1900,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "basque-pelota",
+          "kind": "descent",
+          "note": "Played on a pelota court and governed by the Basque pelota federation.",
+          "source": "https://en.wikipedia.org/wiki/Frontenis"
+        },
+        {
+          "id": "lawn-tennis",
+          "kind": "influence",
+          "note": "Started by Mexican tennis players hitting a tennis ball against the wall with tennis rackets.",
+          "source": "https://en.wikipedia.org/wiki/Frontenis"
+        }
+      ],
+      "note": "Created in Mexico in 1900; first world championship 1952 under the pelota federation.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Frontenis"
+      ]
+    },
+    {
+      "id": "fives",
+      "name": "Fives",
+      "family": "racket-and-wall",
+      "year": 1287,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "jeu-de-paume",
+          "kind": "descent",
+          "note": "Wikipedia: fives derives from French jeu de paume.",
+          "source": "https://en.wikipedia.org/wiki/Fives"
+        }
+      ],
+      "note": "Synod of Exeter banned the game in 1287 for damage to churches. Folk game with no single rulebook; a Wessex fives court of 1787 survives at Warminster School.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Fives",
+        "https://en.wikipedia.org/wiki/Rugby_fives"
+      ]
+    },
+    {
+      "id": "eton-fives",
+      "name": "Eton fives",
+      "family": "racket-and-wall",
+      "year": 1840,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "fives",
+          "kind": "descent",
+          "note": "School form of the older hand game, fixed by the 1877 'Rules of the Game of Fives as played at Eton'.",
+          "source": "https://en.wikipedia.org/wiki/Fives"
+        }
+      ],
+      "note": "First purpose-built courts at Eton 1840, copying the chapel bay; rules written by A. C. Ainger and friends in 1877.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Eton_fives",
+        "https://en.wikipedia.org/wiki/Fives"
+      ]
+    },
+    {
+      "id": "rugby-fives",
+      "name": "Rugby fives",
+      "family": "racket-and-wall",
+      "year": 1857,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "fives",
+          "kind": "descent",
+          "note": "Wikipedia: believed to derive from Wessex fives, which Thomas Arnold learned at Warminster and took to Rugby School.",
+          "source": "https://en.wikipedia.org/wiki/Rugby_fives"
+        }
+      ],
+      "note": "Described in Tom Brown's School Days (1857) from play at Rugby under Thomas Arnold; standard court dimensions fixed 1934. Year of first full rules not found.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rugby_fives",
+        "https://en.wikipedia.org/wiki/Fives"
+      ]
+    },
+    {
+      "id": "gaelic-handball",
+      "name": "Gaelic handball",
+      "family": "racket-and-wall",
+      "year": 1527,
+      "approx": false,
+      "ended": null,
+      "parents": [],
+      "note": "Galway town statutes of 1527 forbade ball games against the town walls; handball was written into the GAA charter in 1884; Irish Handball Council 1924.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Gaelic_handball"
+      ]
+    },
+    {
+      "id": "american-handball",
+      "name": "American handball",
+      "family": "racket-and-wall",
+      "year": 1873,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "gaelic-handball",
+          "kind": "descent",
+          "note": "Wikipedia traces the US game to Irish immigrants.",
+          "source": "https://en.wikipedia.org/wiki/American_handball"
+        }
+      ],
+      "note": "Two courts recorded in San Francisco in 1873; national championships yearly since 1919 (AAU, then USHA from 1950). 1919 stands in for first national rules.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/American_handball"
+      ]
+    },
+    {
+      "id": "rackets",
+      "name": "Rackets",
+      "family": "racket-and-wall",
+      "year": 1750,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "fives",
+          "kind": "descent",
+          "note": "Wikipedia: historians generally say prisoners modified fives by using tennis rackets to speed up play.",
+          "source": "https://en.wikipedia.org/wiki/Rackets_(sport)"
+        },
+        {
+          "id": "real-tennis",
+          "kind": "influence",
+          "note": "The implement: prisoners used tennis rackets.",
+          "source": "https://en.wikipedia.org/wiki/Rackets_(sport)"
+        }
+      ],
+      "note": "Began as an 18th-century pastime in London's King's Bench and Fleet debtors' prisons; Harrow boys shown playing in 1795. Year of first written rules not found.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rackets_(sport)"
+      ]
+    },
+    {
+      "id": "squash",
+      "name": "Squash",
+      "family": "racket-and-wall",
+      "year": 1830,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "rackets",
+          "kind": "descent",
+          "note": "Wikipedia (both articles): began in the 19th century as an offshoot of rackets at Harrow School.",
+          "source": "https://en.wikipedia.org/wiki/Squash_(sport)"
+        }
+      ],
+      "note": "Around 1830 Harrow boys found a punctured rackets ball gave a more varied game; four courts built at Harrow 1864; first published rules 1912 (US); Squash Rackets Association in Britain 1928.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Squash_(sport)",
+        "https://en.wikipedia.org/wiki/Rackets_(sport)"
+      ]
+    },
+    {
+      "id": "lawn-tennis",
+      "name": "Lawn tennis",
+      "family": "racket-and-wall",
+      "year": 1874,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "real-tennis",
+          "kind": "descent",
+          "note": "Wingfield's patent was for a 'New and Improved Court for Playing the Ancient Game of Tennis'; Wikipedia: developed from the indoor game of real tennis once rubber balls bounced on grass.",
+          "source": "https://en.wikipedia.org/wiki/Walter_Clopton_Wingfield"
+        },
+        {
+          "id": "rackets",
+          "kind": "influence",
+          "note": "Wingfield adopted the rackets scoring, games of 15 points called aces; dropped for real tennis scoring by 1877.",
+          "source": "https://en.wikipedia.org/wiki/History_of_tennis"
+        },
+        {
+          "id": "basque-pelota",
+          "kind": "influence",
+          "disputed": true,
+          "note": "Wikipedia says Gem and Perera's 1859-65 game mixed rackets with Basque pelota. This is their game, not Wingfield's, and how much of it reached the 1875-77 rules is not settled.",
+          "source": "https://en.wikipedia.org/wiki/Harry_Gem"
+        }
+      ],
+      "note": "Gem and Perera played a lawn game in Birmingham between 1859 and 1865; Wingfield published rules in February 1874; MCC rules 1875; All England Club rules for the first Wimbledon 1877.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/History_of_tennis",
+        "https://en.wikipedia.org/wiki/Walter_Clopton_Wingfield",
+        "https://en.wikipedia.org/wiki/Harry_Gem",
+        "https://en.wikipedia.org/wiki/Tennis"
+      ]
+    },
+    {
+      "id": "soft-tennis",
+      "name": "Soft tennis",
+      "family": "racket-and-wall",
+      "year": 1884,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "lawn-tennis",
+          "kind": "descent",
+          "note": "Tennis adapted in Japan with a hollow rubber ball and its own racket.",
+          "source": "https://en.wikipedia.org/wiki/Soft_tennis"
+        }
+      ],
+      "note": "Arose in Japan in 1884 after a missionary introduced tennis; Asian federation 1955, international federation 1973.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Soft_tennis"
+      ]
+    },
+    {
+      "id": "table-tennis",
+      "name": "Table tennis",
+      "family": "racket-and-wall",
+      "year": 1883,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "lawn-tennis",
+          "kind": "descent",
+          "note": "Wikipedia: 'derived from tennis'; early scoring was the same as lawn tennis.",
+          "source": "https://en.wikipedia.org/wiki/Table_tennis"
+        }
+      ],
+      "note": "Slazenger patented a table tennis net in 1883; 'ping-pong' trademarked 1901; unofficial world championship 1902; ITTF and first official world championships 1926. Year of the very first written rules not found.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Table_tennis"
+      ]
+    },
+    {
+      "id": "paddle-tennis",
+      "name": "Paddle tennis",
+      "family": "racket-and-wall",
+      "year": 1898,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "lawn-tennis",
+          "kind": "descent",
+          "note": "Tennis on a smaller court with a lower net and a solid paddle.",
+          "source": "https://www.redbull.com/int-en/history-of-padel"
+        }
+      ],
+      "note": "Invented by Frank Peer Beal in Albion, Michigan, 1898; first tournament 1922; United States Paddle Tennis Association 1923.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Paddle_tennis",
+        "https://www.redbull.com/int-en/history-of-padel"
+      ]
+    },
+    {
+      "id": "platform-tennis",
+      "name": "Platform tennis",
+      "family": "racket-and-wall",
+      "year": 1928,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "paddle-tennis",
+          "kind": "descent",
+          "note": "Cogswell bought paddle tennis paddles and balls and played with them on the platform; the first association was named for paddle tennis.",
+          "source": "https://platformtennishalloffame.org/event/the-founders/"
+        },
+        {
+          "id": "lawn-tennis",
+          "kind": "influence",
+          "note": "Tennis scoring.",
+          "source": "https://en.wikipedia.org/wiki/Platform_tennis"
+        }
+      ],
+      "note": "Cogswell and Blanchard built a 48 x 20 ft platform in Scarsdale, New York, in November 1928; court size settled 1932; American Paddle Tennis Association 1934; first national championship 1935.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Platform_tennis",
+        "https://platformtennishalloffame.org/event/the-founders/"
+      ]
+    },
+    {
+      "id": "padel",
+      "name": "Padel",
+      "family": "racket-and-wall",
+      "year": 1969,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "lawn-tennis",
+          "kind": "descent",
+          "note": "International Padel Federation: Corcuera was a tennis enthusiast without room for a full court, and built a smaller walled one with a tennis net.",
+          "source": "https://www.padelfip.com/history/"
+        },
+        {
+          "id": "platform-tennis",
+          "kind": "influence",
+          "disputed": true,
+          "note": "Wikipedia says he added elements of platform tennis; the LTA lists platform tennis as a forerunner. The federation's own history names no forerunner at all.",
+          "source": "https://en.wikipedia.org/wiki/Padel"
+        },
+        {
+          "id": "squash",
+          "kind": "influence",
+          "disputed": true,
+          "note": "Wikipedia says he 'modified his squash court'; the federation says he built the court in his yard for lack of space for tennis.",
+          "source": "https://en.wikipedia.org/wiki/Padel"
+        },
+        {
+          "id": "paddle-tennis",
+          "kind": "influence",
+          "disputed": true,
+          "note": "Red Bull's history says Corcuera had tried paddle tennis on a trip to the United States; a 2013 paper by Sanchez-Alcaraz lists this as one of two competing origin stories.",
+          "source": "https://rio.upo.es/entities/publication/aeaada15-75a1-4e2a-895a-bd3f21b2646c/full"
+        }
+      ],
+      "note": "Enrique Corcuera built a 20 x 10 m walled court in Acapulco in 1969 and his wife Viviana wrote the first rules; first Spanish courts 1974; international federation 1991; rules unified 1997.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Padel",
+        "https://www.padelfip.com/history/",
+        "https://www.ltapadel.org.uk/what-we-do/what-is-the-history-of-padel/",
+        "https://www.redbull.com/int-en/history-of-padel"
+      ]
+    },
+    {
+      "id": "beach-tennis",
+      "name": "Beach tennis",
+      "family": "racket-and-wall",
+      "year": 1972,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "lawn-tennis",
+          "kind": "descent",
+          "note": "Started by tennis players using their rackets on the beach.",
+          "source": "https://en.wikipedia.org/wiki/Beach_tennis"
+        },
+        {
+          "id": "beach-volleyball",
+          "kind": "influence",
+          "note": "Played over the volleyball nets already on the beach; the ball may not bounce.",
+          "source": "https://en.wikipedia.org/wiki/Beach_tennis"
+        }
+      ],
+      "note": "Tennis players on holiday at Lido degli Estensi, Italy, used beach volleyball nets in the early 1970s; Wikipedia dates the current rules to Torredembarra, Spain, 1976; international federation 1995; ITF recognition 2008.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Beach_tennis"
+      ]
+    },
+    {
+      "id": "battledore-and-shuttlecock",
+      "name": "Battledore and shuttlecock",
+      "family": "racket-and-wall",
+      "year": 1590,
+      "approx": true,
+      "ended": 1930,
+      "parents": [],
+      "note": "Shuttlecock games go back about 2,000 years in Asia; in Europe the words are recorded from the late 16th century. A keep-it-up game with no net and no rulebook; faded once badminton spread in the 1920s.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Battledore_and_shuttlecock"
+      ]
+    },
+    {
+      "id": "badminton",
+      "name": "Badminton",
+      "family": "racket-and-wall",
+      "year": 1860,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "battledore-and-shuttlecock",
+          "kind": "descent",
+          "note": "Wikipedia: developed in the mid-19th century among British officers in India as a variant of battledore and shuttlecock, with sides and a net; 'its exact origin remains obscure'. The Badminton House article notes the rival story that the Duke of Beaufort's children invented it there in 1863.",
+          "source": "https://en.wikipedia.org/wiki/Badminton"
+        }
+      ],
+      "note": "Isaac Spratt's booklet 'Badminton Battledore - A New Game' 1860; first rules drawn up at Poona 1873; revised by J. H. E. Hart of Bath 1887; Badminton Association of England rules 1893.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Badminton",
+        "https://en.wikipedia.org/wiki/Battledore_and_shuttlecock",
+        "https://en.wikipedia.org/wiki/Badminton_House"
+      ]
+    },
+    {
+      "id": "crossminton",
+      "name": "Crossminton",
+      "family": "racket-and-wall",
+      "year": 2001,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "badminton",
+          "kind": "descent",
+          "note": "Badminton without a net, with a heavier shuttle and two separated squares.",
+          "source": "https://en.wikipedia.org/wiki/Crossminton"
+        },
+        {
+          "id": "squash",
+          "kind": "influence",
+          "note": "Wikipedia: combines elements of badminton, squash and tennis.",
+          "source": "https://en.wikipedia.org/wiki/Crossminton"
+        },
+        {
+          "id": "lawn-tennis",
+          "kind": "influence",
+          "note": "Wikipedia: combines elements of badminton, squash and tennis.",
+          "source": "https://en.wikipedia.org/wiki/Crossminton"
+        }
+      ],
+      "note": "Shuttle and game devised by Bill Brandes in Berlin in 2001; international body founded 2011; renamed crossminton 2016.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Crossminton"
+      ]
+    },
+    {
+      "id": "pickleball",
+      "name": "Pickleball",
+      "family": "racket-and-wall",
+      "year": 1965,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "badminton",
+          "kind": "descent",
+          "note": "USA Pickleball: played on an old badminton court, first with the net at badminton height, and Pritchard, Bell and McCallum 'created rules, relying heavily on badminton'.",
+          "source": "https://usapickleball.org/what-is-pickleball/history-of-the-game"
+        },
+        {
+          "id": "table-tennis",
+          "kind": "influence",
+          "note": "First played with ping-pong paddles.",
+          "source": "https://usapickleball.org/what-is-pickleball/history-of-the-game"
+        },
+        {
+          "id": "lawn-tennis",
+          "kind": "influence",
+          "note": "Net lowered to 36 inches, a height Wikipedia likens to tennis.",
+          "source": "https://en.wikipedia.org/wiki/Pickleball"
+        }
+      ],
+      "note": "Invented summer 1965 at Joel Pritchard's home on Bainbridge Island, Washington; first official rulebook 1984 from the new national association.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Pickleball",
+        "https://usapickleball.org/what-is-pickleball/history-of-the-game"
+      ]
+    },
+    {
+      "id": "paddleball",
+      "name": "Paddleball",
+      "family": "racket-and-wall",
+      "year": 1930,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "american-handball",
+          "kind": "descent",
+          "note": "Played on handball courts with the walls in place of a net.",
+          "source": "https://en.wikipedia.org/wiki/Four_wall_paddleball"
+        },
+        {
+          "id": "paddle-tennis",
+          "kind": "influence",
+          "note": "Riskey saw tennis players practicing on the handball courts with paddle tennis paddles.",
+          "source": "https://en.wikipedia.org/wiki/Four_wall_paddleball"
+        }
+      ],
+      "note": "Invented 1930 by Earl Riskey at the University of Michigan; earliest national championship found is 1962. A separate one-wall street game in New York shares the name.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Four_wall_paddleball",
+        "https://en.wikipedia.org/wiki/American_handball"
+      ]
+    },
+    {
+      "id": "racquetball",
+      "name": "Racquetball",
+      "family": "racket-and-wall",
+      "year": 1950,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "paddleball",
+          "kind": "descent",
+          "note": "Wikipedia: Sobek designed a strung paddle and based his rules on squash, handball and paddleball; the paddleball article calls racquetball 'derived from four wall paddleball'.",
+          "source": "https://en.wikipedia.org/wiki/Racquetball"
+        },
+        {
+          "id": "american-handball",
+          "kind": "influence",
+          "note": "Rules drew on handball, and it is played on the handball court.",
+          "source": "https://en.wikipedia.org/wiki/Racquetball"
+        },
+        {
+          "id": "squash",
+          "kind": "influence",
+          "note": "Rules drew on squash; strung racket.",
+          "source": "https://en.wikipedia.org/wiki/Racquetball"
+        }
+      ],
+      "note": "Joe Sobek devised 'paddle rackets' at the Greenwich, Connecticut YMCA in 1950 (the handball article says 1949) and printed rules in 1952; renamed racquetball with the 1969 association.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Racquetball",
+        "https://en.wikipedia.org/wiki/Four_wall_paddleball",
+        "https://en.wikipedia.org/wiki/American_handball"
+      ]
+    },
+    {
+      "id": "stoolball",
+      "name": "Stoolball",
+      "family": "bat-and-ball",
+      "year": 1450,
+      "approx": false,
+      "ended": null,
+      "parents": [],
+      "note": "attested by name 1450; first rules 1867 by Rev. William de St Croix of Glynde; still played in Sussex, Kent, Surrey under Stoolball England",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Stoolball",
+        "https://www.stoolball.org.uk/history/"
+      ]
+    },
+    {
+      "id": "cricket",
+      "name": "Cricket",
+      "family": "bat-and-ball",
+      "year": 1550,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "stoolball",
+          "kind": "descent",
+          "disputed": true,
+          "note": "David Block calls stoolball 'a likely parent of cricket, which developed independently'; Stoolball England says 'probably cricket too'. Wikipedia's History of cricket to 1725 says there is 'no evidence of cricket having evolved from another bat-and-ball sport', and a 2009 theory has it imported from Flanders.",
+          "source": "https://en.wikipedia.org/wiki/Baseball_Before_We_Knew_It"
+        }
+      ],
+      "note": "1597 Guildford court testimony of play about 1550; first known Laws 1744; MCC custodian since 1788",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Cricket",
+        "https://en.wikipedia.org/wiki/History_of_cricket_to_1725",
+        "https://en.wikipedia.org/wiki/History_of_baseball"
+      ]
+    },
+    {
+      "id": "english-base-ball",
+      "name": "English base-ball",
+      "family": "bat-and-ball",
+      "year": 1744,
+      "approx": true,
+      "ended": 1900,
+      "parents": [
+        {
+          "id": "stoolball",
+          "kind": "descent",
+          "disputed": true,
+          "note": "Block: baseball's 'most direct antecedents are the English games of stoolball and tut-ball', with tut-ball suggested as the immediate predecessor of English base-ball. Thorn is more cautious: these games 'are likely to be close cousins' but 'exactly how, or how closely, has not been established'.",
+          "source": "https://en.wikipedia.org/wiki/Baseball_Before_We_Knew_It"
+        }
+      ],
+      "note": "first printed 1744 in A Little Pretty Pocket-Book (a 1700 Maidstone mention is also cited); Prince of Wales played 1748/49; first printed rules are Gutsmuths's 1796 German description 'das englische Base-ball'. Block and Thorn think the ball may have been hit with the hand. End date is a rough guess, not verified: the name was displaced by 'rounders' in England during the 19th century.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Origins_of_baseball",
+        "https://en.wikipedia.org/wiki/Baseball_Before_We_Knew_It",
+        "https://en.wikipedia.org/wiki/British_baseball",
+        "https://grantland.com/features/baseball-archaeologist-david-block"
+      ]
+    },
+    {
+      "id": "rounders",
+      "name": "Rounders",
+      "family": "bat-and-ball",
+      "year": 1828,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "english-base-ball",
+          "kind": "descent",
+          "note": "Block: both came from English base-ball; rounders is the later English name and form ('the name baseball was superseded by the name rounders in England'). The word rounders is not recorded before 1827/1828.",
+          "source": "https://en.wikipedia.org/wiki/Rounders"
+        }
+      ],
+      "note": "first described 1828 in Clarke's The Boy's Own Book; first national rules 1884 by the Gaelic Athletic Association; Liverpool and Scottish associations 1889. GAA rounders and Rounders England now keep different rulebooks; kept as one entry here.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rounders",
+        "https://en.wikipedia.org/wiki/GAA_rounders",
+        "https://www.patrickcarroll.co.uk/rounders-schmounders/"
+      ]
+    },
+    {
+      "id": "town-ball",
+      "name": "Town ball",
+      "family": "bat-and-ball",
+      "year": 1831,
+      "approx": true,
+      "ended": 1865,
+      "parents": [
+        {
+          "id": "english-base-ball",
+          "kind": "descent",
+          "note": "Block: English base-ball arrived in colonial America and developed into regional forms such as town ball and the New York game. Massachusetts rules codified local games called 'base' or 'round ball'.",
+          "source": "https://en.wikipedia.org/wiki/Baseball_Before_We_Knew_It"
+        }
+      ],
+      "note": "Philadelphia play 1831, Olympic Ball Club 1833; Massachusetts rules written at Dedham 1858; the country standardized on the New York game by the end of the Civil War",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Town_ball",
+        "https://en.wikipedia.org/wiki/Massachusetts_Game"
+      ]
+    },
+    {
+      "id": "baseball",
+      "name": "Baseball",
+      "family": "bat-and-ball",
+      "year": 1845,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "english-base-ball",
+          "kind": "descent",
+          "note": "Block (2005): baseball descends from English base-ball, brought by colonists and developed independently in America; Thorn: 'the game was not invented so much as it was accreted'.",
+          "source": "https://en.wikipedia.org/wiki/Baseball_Before_We_Knew_It"
+        }
+      ],
+      "note": "Wheaton's Gotham Club rules 1837 (lost); Knickerbocker Rules 1845 are the earliest surviving rules in the line; NABBP 1857. 'Base ball' as a name is older: see english-base-ball.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Baseball",
+        "https://en.wikipedia.org/wiki/Knickerbocker_Rules",
+        "https://en.wikipedia.org/wiki/Origins_of_baseball",
+        "https://en.wikipedia.org/wiki/History_of_baseball"
+      ]
+    },
+    {
+      "id": "softball",
+      "name": "Softball",
+      "family": "bat-and-ball",
+      "year": 1887,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "baseball",
+          "kind": "descent",
+          "note": "George Hancock's indoor baseball, Farragut Boat Club, Chicago, 1887; his 1889 rules appended 19 special rules to the outdoor baseball rules and were adopted by the Mid Winter Indoor Baseball League.",
+          "source": "https://archive.teamusa.com/usa-softball/about-usa-sb/history.html"
+        }
+      ],
+      "note": "first game Thanksgiving 1887; first rules 1889; Rober's outdoor kitten ball 1895; name 'softball' coined 1926",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Softball",
+        "https://en.wikipedia.org/wiki/George_Hancock_(softball)"
+      ]
+    },
+    {
+      "id": "british-baseball",
+      "name": "British baseball",
+      "family": "bat-and-ball",
+      "year": 1892,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "rounders",
+          "kind": "descent",
+          "note": "National Rounders Association and South Wales Rounders Association wrote new adult rules on the base of rounders and in 1892 dropped the name 'rounders' for 'baseball'.",
+          "source": "https://en.wikipedia.org/wiki/British_baseball"
+        }
+      ],
+      "note": "codified and renamed 1892; still played in Cardiff, Newport and Liverpool; England-Wales internationals ended 2015",
+      "sources": [
+        "https://en.wikipedia.org/wiki/British_baseball"
+      ]
+    },
+    {
+      "id": "kuningaspallo",
+      "name": "Kuningaspallo",
+      "family": "bat-and-ball",
+      "year": 1903,
+      "approx": true,
+      "ended": 1922,
+      "parents": [],
+      "note": "rules first published in Finnish 1903; Pihkala's sharpened version 'pitkapallo' published 1915; replaced by pesapallo 1922. Closest equivalents: Swedish langboll, German Schlagball, Russian lapta.",
+      "sources": [
+        "https://www.jyu.fi/tdk/museo/pesapallo_en/synty.htm",
+        "https://fi.wikipedia.org/wiki/Pes%C3%A4pallo"
+      ]
+    },
+    {
+      "id": "pesapallo",
+      "name": "Pesäpallo",
+      "family": "bat-and-ball",
+      "year": 1920,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "kuningaspallo",
+          "kind": "descent",
+          "note": "Lauri Pihkala developed kuningaspallo into pitkapallo (1914-15) and then into pesapallo; kept the vertical pitch and putting a runner out by hitting them with the ball.",
+          "source": "https://www.jyu.fi/tdk/museo/pesapallo_en/synty.htm"
+        },
+        {
+          "id": "baseball",
+          "kind": "influence",
+          "note": "Pihkala 'adopted the number of bases, contested bases, and runs as scoring units from baseball'.",
+          "source": "https://www.jyu.fi/tdk/museo/pesapallo_en/synty.htm"
+        }
+      ],
+      "note": "first trial match 14 Nov 1920 in Helsinki; rules published 1921 (army order); replaced longball officially and first championship 1922",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Pes%C3%A4pallo",
+        "https://www.jyu.fi/tdk/museo/pesapallo_en/synty.htm",
+        "https://fi.wikipedia.org/wiki/Pes%C3%A4pallo"
+      ]
+    },
+    {
+      "id": "lapta",
+      "name": "Lapta",
+      "family": "bat-and-ball",
+      "year": 1350,
+      "approx": true,
+      "ended": null,
+      "parents": [],
+      "note": "bats and balls in 14th-century Novgorod layers; a printed rule booklet existed by 1915; first republic-level competition 1958; federation 1996",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Lapta_(game)",
+        "https://ru.wikipedia.org/wiki/Русская_лапта"
+      ]
+    },
+    {
+      "id": "oina",
+      "name": "Oină",
+      "family": "bat-and-ball",
+      "year": 1364,
+      "approx": true,
+      "ended": null,
+      "parents": [],
+      "note": "possible 1364 mention; first firm reference 1782; school rules and first national competition 1899 under Spiru Haret; federation 1932",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Oin%C4%83"
+      ]
+    },
+    {
+      "id": "schlagball",
+      "name": "Schlagball",
+      "family": "bat-and-ball",
+      "year": 1796,
+      "approx": false,
+      "ended": null,
+      "parents": [],
+      "note": "described by GutsMuths 1796 as 'das deutsche Ballspiel'; unified rules 1934/36; last German championship 1954; survives in a few cities and on Langeoog and Spiekeroog",
+      "sources": [
+        "https://de.wikipedia.org/wiki/Schlagball"
+      ]
+    },
+    {
+      "id": "kickball",
+      "name": "Kickball",
+      "family": "bat-and-ball",
+      "year": 1917,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "baseball",
+          "kind": "descent",
+          "note": "Nicholas Seuss's 1917 Playground Book gives 12 rules and a diamond for 'Kick Base Ball'.",
+          "source": "https://en.wikipedia.org/wiki/Kickball"
+        }
+      ],
+      "note": "first written 1917, Cincinnati; World Adult Kickball Association 1998",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kickball"
+      ]
+    },
+    {
+      "id": "wiffle-ball",
+      "name": "Wiffle ball",
+      "family": "bat-and-ball",
+      "year": 1953,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "baseball",
+          "kind": "descent",
+          "note": "David Mullany's 1953 backyard baseball with a perforated plastic ball; no base running",
+          "source": "https://en.wikipedia.org/wiki/Wiffle_ball"
+        }
+      ],
+      "note": "",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wiffle_ball"
+      ]
+    },
+    {
+      "id": "baseball5",
+      "name": "Baseball5",
+      "family": "bat-and-ball",
+      "year": 2017,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "baseball",
+          "kind": "descent",
+          "note": "World Baseball Softball Confederation created it in 2017 as a five-a-side, hand-hit, no-pitcher version, modeled on Latin American street games (Cuban 'cuatro esquinas', Venezuelan 'pelotica de goma').",
+          "source": "https://en.wikipedia.org/wiki/Baseball5"
+        }
+      ],
+      "note": "",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Baseball5"
+      ]
+    },
+    {
+      "id": "indoor-cricket",
+      "name": "Indoor cricket",
+      "family": "bat-and-ball",
+      "year": 1968,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "cricket",
+          "kind": "descent",
+          "note": "netted-court version developed in Perth, Western Australia, in the late 1970s; shortened running, bonus runs for hitting net zones",
+          "source": "https://en.wikipedia.org/wiki/Indoor_cricket"
+        }
+      ],
+      "note": "first indoor tournament Flensburg 1968-69; the netted game dates from late-1970s Perth (year approximate); World Indoor Cricket Federation before 1995. The UK sports-hall game is a separate, older variant under the ECB.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Indoor_cricket",
+        "https://en.wikipedia.org/wiki/Indoor_cricket_(UK_variant)"
+      ]
+    },
+    {
+      "id": "vigoro",
+      "name": "Vigoro",
+      "family": "bat-and-ball",
+      "year": 1901,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "cricket",
+          "kind": "descent",
+          "note": "invented 1901 by John George Grant, combining cricket and tennis",
+          "source": "https://en.wikipedia.org/wiki/Vigoro"
+        },
+        {
+          "id": "lawn-tennis",
+          "kind": "influence",
+          "note": "original version was played with tennis rackets",
+          "source": "https://en.wikipedia.org/wiki/Vigoro"
+        }
+      ],
+      "note": "played in England about 1902; taken to Australia in World War I, where four associations still played in 2022. Wikipedia says the current form is closer to cricket and baseball, with no documented borrowing.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Vigoro"
+      ]
+    },
+    {
+      "id": "kilikiti",
+      "name": "Kilikiti",
+      "family": "bat-and-ball",
+      "year": 1830,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "cricket",
+          "kind": "descent",
+          "note": "grew from the cricket English missionaries brought to Samoa in the early 19th century",
+          "source": "https://en.wikipedia.org/wiki/Kilikiti"
+        }
+      ],
+      "note": "early 19th century; New Zealand Kilikiti Association began standardizing rules in 1999",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kilikiti"
+      ]
+    },
+    {
+      "id": "ground-billiards",
+      "name": "Ground billiards",
+      "family": "target",
+      "year": 1300,
+      "approx": true,
+      "ended": 1800,
+      "parents": [],
+      "note": "recognizable from the 14th century; outdoor game known until about the start of the 19th century; never had one written code",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ground_billiards"
+      ]
+    },
+    {
+      "id": "jeu-de-mail",
+      "name": "Jeu de mail",
+      "family": "target",
+      "year": 1416,
+      "approx": false,
+      "ended": 1900,
+      "parents": [
+        {
+          "id": "ground-billiards",
+          "kind": "descent",
+          "note": "Wikipedia (citing Stein & Rubino, Shamos): ground billiards 'appears to have been ancestral to' jeu de mail; pall-mall article calls jeu de mail 'a French form of ground billiards'",
+          "source": "https://en.wikipedia.org/wiki/Ground_billiards"
+        }
+      ],
+      "note": "Latin text of 1416; survived in southern France into the early 20th century (end year approximate)",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jeu_de_mail",
+        "https://en.wikipedia.org/wiki/Ground_billiards"
+      ]
+    },
+    {
+      "id": "pall-mall",
+      "name": "Pall-mall",
+      "family": "target",
+      "year": 1550,
+      "approx": true,
+      "ended": 1800,
+      "parents": [
+        {
+          "id": "jeu-de-mail",
+          "kind": "descent",
+          "note": "'pall-mall is an early modern development from jeu de mail'",
+          "source": "https://en.wikipedia.org/wiki/Pall-mall"
+        }
+      ],
+      "note": "played mostly in the 16th and 17th centuries; no exact first date in the source; long out of use by the early 19th century",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Pall-mall"
+      ]
+    },
+    {
+      "id": "croquet",
+      "name": "Croquet",
+      "family": "target",
+      "year": 1834,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "pall-mall",
+          "kind": "descent",
+          "disputed": true,
+          "note": "Two theories. Britannica 1877 and others: descends from pall-mall. Irish theory: came from Ireland (crookey, 1830s), perhaps from Brittany. Neither has a pre-1858 document showing the croquet stroke. Both are placed inside the ground-billiards tradition.",
+          "source": "https://en.wikipedia.org/wiki/Croquet"
+        }
+      ],
+      "note": "'crookey' played at Castlebellingham, Ireland in 1834; Isaac Spratt registered the first rules in London in November 1856; Jaques editions 1857, 1860, 1864",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Croquet",
+        "https://en.wikipedia.org/wiki/Ground_billiards"
+      ]
+    },
+    {
+      "id": "roque",
+      "name": "Roque",
+      "family": "target",
+      "year": 1885,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "croquet",
+          "kind": "descent",
+          "note": "American adaptation of croquet: walled clay court, ten arches, short mallets; National Croquet Association (1882) became the National Roque Association in 1899",
+          "source": "https://en.wikipedia.org/wiki/Roque"
+        }
+      ],
+      "note": "American hard-court croquet from the 1880s; named roque and National Roque Association formed 1899; Olympic 1904; national tournaments suspended 2004, a handful of players remain",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Roque"
+      ]
+    },
+    {
+      "id": "gateball",
+      "name": "Gateball",
+      "family": "target",
+      "year": 1947,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "croquet",
+          "kind": "descent",
+          "note": "Suzuki revised croquet's rules: small court, numbered balls 1-10, two teams of five, 30-minute games",
+          "source": "https://en.wikipedia.org/wiki/Gateball"
+        }
+      ],
+      "note": "invented 1947 by Suzuki Kazunobu in Hokkaido",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Gateball"
+      ]
+    },
+    {
+      "id": "colf",
+      "name": "Colf",
+      "family": "target",
+      "year": 1261,
+      "approx": false,
+      "ended": 1700,
+      "parents": [],
+      "note": "first reference 1261 (Jacob van Maerlant); faded as it moved indoors and became kolf around the start of the 18th century",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kolf",
+        "https://flemish.wp.st-andrews.ac.uk/?p=540",
+        "https://en.wikipedia.org/wiki/History_of_golf"
+      ]
+    },
+    {
+      "id": "kolf",
+      "name": "Kolf",
+      "family": "target",
+      "year": 1700,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "colf",
+          "kind": "descent",
+          "note": "colf moved onto short courts beside inns and then indoors, becoming kolf",
+          "source": "https://en.wikipedia.org/wiki/Kolf"
+        }
+      ],
+      "note": "indoor game caught on from the start of the 18th century; about 200 courses in Amsterdam by 1769; still played by about 600 people",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kolf"
+      ]
+    },
+    {
+      "id": "golf",
+      "name": "Golf",
+      "family": "target",
+      "year": 1457,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "colf",
+          "kind": "descent",
+          "disputed": true,
+          "note": "Disputed. Van Hengel (Early Golf, 1982) and Geert & Sara Nijs: colf came first (1261) and reached Scotland with Low Countries traders; scottishgolfhistory.org says most historians now accept colf supplied some elements. Against: the R&A and the Wikipedia golf article hold that the modern game originated in Scotland; the St Andrews Flemish project calls the link plausible but unproven and allows independent origin. 'Influence' may be the safer kind.",
+          "source": "https://flemish.wp.st-andrews.ac.uk/?p=540"
+        }
+      ],
+      "note": "banned by the Scottish Parliament 1457; Leith rules of the Gentlemen Golfers 1744; 18 holes at St Andrews 1764",
+      "sources": [
+        "https://en.wikipedia.org/wiki/History_of_golf",
+        "https://en.wikipedia.org/wiki/Golf",
+        "https://flemish.wp.st-andrews.ac.uk/?p=540",
+        "https://www.scottishgolfhistory.org/origin-of-golf-terms/golf/"
+      ]
+    },
+    {
+      "id": "miniature-golf",
+      "name": "Miniature golf",
+      "family": "target",
+      "year": 1867,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "golf",
+          "kind": "descent",
+          "note": "putting-only offshoot of golf played on small built courses",
+          "source": "https://en.wikipedia.org/wiki/Miniature_golf"
+        }
+      ],
+      "note": "Himalayas putting course, St Andrews 1867; Thistle Dhu 1916; Tom Thumb patent 1927; competitions from 1930; World Minigolf Sport Federation 1993; first rulebook year not found",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Miniature_golf"
+      ]
+    },
+    {
+      "id": "disc-golf",
+      "name": "Disc golf",
+      "family": "target",
+      "year": 1964,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "golf",
+          "kind": "descent",
+          "note": "PDGA: throw from a tee toward a target in the fewest throws, scored as in golf; Wikipedia: 'rules similar to golf'",
+          "source": "https://www.pdga.com/history"
+        }
+      ],
+      "note": "isolated play earlier; Rice University tournaments by 1964; first permanent course Oak Grove, Pasadena 1975; Ed Headrick founded the DGA and PDGA in 1976 to formalize it",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Disc_golf",
+        "https://www.pdga.com/history"
+      ]
+    },
+    {
+      "id": "footgolf",
+      "name": "Footgolf",
+      "family": "target",
+      "year": 2008,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "golf",
+          "kind": "descent",
+          "note": "played on golf courses to golf's fewest-strokes scoring with a larger cup",
+          "source": "https://en.wikipedia.org/wiki/Footgolf"
+        },
+        {
+          "id": "association-football",
+          "kind": "influence",
+          "note": "takes the ball and the kick from football; inspired by a Tottenham Hotspur training game",
+          "source": "https://en.wikipedia.org/wiki/Footgolf"
+        }
+      ],
+      "note": "created 2008 in the Netherlands by Bas Korsten and Michael Jansen; first tournament 6 September 2009; international federation 2012",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Footgolf"
+      ]
+    },
+    {
+      "id": "table-billiards",
+      "name": "Table billiards",
+      "family": "target",
+      "year": 1470,
+      "approx": true,
+      "ended": 1800,
+      "parents": [
+        {
+          "id": "ground-billiards",
+          "kind": "descent",
+          "note": "Shamos (BCA history essay): evolved from a 15th-century lawn game similar to croquet, moved indoors onto a green-cloth table, at first with a hoop and an upright stick. Wikipedia: late 17th-century indoor billiards 'was essentially the same game' as ground billiards.",
+          "source": "https://en.wikipedia.org/wiki/Ground_billiards"
+        }
+      ],
+      "note": "first known indoor table belonged to Louis XI (reigned 1461-1483); first printed rules in Cotton's Compleat Gamester 1674; hoop and upright pin gone during the 18th century, straight cue by about 1800, after which only the named descendants are played",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Cue_sports",
+        "https://en.wikipedia.org/wiki/Ground_billiards",
+        "https://bca-pool.com/page/39"
+      ]
+    },
+    {
+      "id": "carom-billiards",
+      "name": "Carom billiards",
+      "family": "target",
+      "year": 1750,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "table-billiards",
+          "kind": "descent",
+          "note": "pocketless three-ball development of early table billiards",
+          "source": "https://en.wikipedia.org/wiki/Carom_billiards"
+        }
+      ],
+      "note": "thought traceable to 18th-century France; balkline 1879; first three-cushion tournament 1878; world body UMB",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Carom_billiards",
+        "https://en.wikipedia.org/wiki/Cue_sports"
+      ]
+    },
+    {
+      "id": "english-billiards",
+      "name": "English billiards",
+      "family": "target",
+      "year": 1800,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "table-billiards",
+          "kind": "descent",
+          "note": "merged the two-ball pocket games called the winning game and the losing game",
+          "source": "https://en.wikipedia.org/wiki/English_billiards"
+        },
+        {
+          "id": "carom-billiards",
+          "kind": "descent",
+          "note": "took the red ball and the cannon from the French carambole game",
+          "source": "https://en.wikipedia.org/wiki/English_billiards"
+        }
+      ],
+      "note": "three games merged by about 1800; Billiards Association, first governing body, 1885",
+      "sources": [
+        "https://en.wikipedia.org/wiki/English_billiards"
+      ]
+    },
+    {
+      "id": "pyramid-pool",
+      "name": "Pyramid pool",
+      "family": "target",
+      "year": 1795,
+      "approx": false,
+      "ended": 1900,
+      "parents": [
+        {
+          "id": "table-billiards",
+          "kind": "descent",
+          "note": "a pocket game on the billiard table; the source gives no more specific parent",
+          "source": "https://en.wikipedia.org/wiki/Pyramid_pool"
+        }
+      ],
+      "note": "earliest recorded rules Vienna 1795; played mainly in the 19th century (end year approximate)",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Pyramid_pool"
+      ]
+    },
+    {
+      "id": "pool",
+      "name": "Pool",
+      "family": "target",
+      "year": 1840,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "pyramid-pool",
+          "kind": "descent",
+          "note": "fifteen-ball pool was 'developed in America in the nineteenth century from pyramid pool'",
+          "source": "https://en.wikipedia.org/wiki/Fifteen-ball_pool"
+        },
+        {
+          "id": "english-billiards",
+          "kind": "influence",
+          "note": "Wikipedia lists English billiards (as American four-ball) as the other English game behind American pool, the less influential of the two",
+          "source": "https://en.wikipedia.org/wiki/Pool_(cue_sports)"
+        }
+      ],
+      "note": "fifteen-ball pool created at Bassford's rooms, Manhattan, late 1830s or 1840s; first tournament 1878; continuous pool 1888; straight pool (14.1) by Jerome Keogh 1910",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Fifteen-ball_pool",
+        "https://en.wikipedia.org/wiki/Pool_(cue_sports)",
+        "https://en.wikipedia.org/wiki/Straight_pool"
+      ]
+    },
+    {
+      "id": "eight-ball",
+      "name": "Eight-ball",
+      "family": "target",
+      "year": 1900,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "pyramid-pool",
+          "kind": "descent",
+          "note": "'a modification of pyramid pool': each side pockets half the balls, 8 ball last. Could equally hang off 'pool', which was the American form of pyramid pool by then.",
+          "source": "https://en.wikipedia.org/wiki/Eight-ball"
+        }
+      ],
+      "note": "arose about 1900 in the United States; Brunswick ball sets 1925; rules later set by the Billiard Congress of America and now the WPA",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Eight-ball",
+        "https://en.wikipedia.org/wiki/Pool_(cue_sports)"
+      ]
+    },
+    {
+      "id": "nine-ball",
+      "name": "Nine-ball",
+      "family": "target",
+      "year": 1920,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "pool",
+          "kind": "descent",
+          "note": "grew up as a pool-hall game on existing pool equipment; no specific parent game is documented",
+          "source": "https://en.wikipedia.org/wiki/Nine-ball"
+        }
+      ],
+      "note": "emerged in the United States in the 1920s; 'exact origins are unknown'; BCA then WPA rules",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nine-ball"
+      ]
+    },
+    {
+      "id": "snooker",
+      "name": "Snooker",
+      "family": "target",
+      "year": 1875,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "pyramid-pool",
+          "kind": "descent",
+          "note": "Combined pyramids (15 reds in a triangle) with black pool, a colored-ball pool game. Black pool has no entry here because no source opened gave its dates.",
+          "source": "https://en.wikipedia.org/wiki/Snooker"
+        }
+      ],
+      "note": "first played in the officers' mess of the 11th Devonshire Regiment, Jabalpur, 1875; Neville Chamberlain finalized rules at Ootacamund 1882; standard rules from the Billiards Association and Control Club 1919",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Snooker",
+        "https://en.wikipedia.org/wiki/Pyramid_pool"
+      ]
+    },
+    {
+      "id": "nine-pin-bowling",
+      "name": "Nine-pin bowling",
+      "family": "target",
+      "year": 1300,
+      "approx": true,
+      "ended": null,
+      "parents": [],
+      "note": "medieval Germany; the often-quoted 3rd-4th century German church ritual is unreferenced legend, so no year given; first written rules not found; world body WNBA; an American form survives in Texas",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nine-pin_bowling",
+        "https://en.wikipedia.org/wiki/Bowling"
+      ]
+    },
+    {
+      "id": "skittles",
+      "name": "Skittles",
+      "family": "target",
+      "year": 1634,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "nine-pin-bowling",
+          "kind": "descent",
+          "note": "British branch of the continental nine-pin games (German kegeln, French quilles); the word comes from the same Germanic root",
+          "source": "https://en.wikipedia.org/wiki/Skittles_(sport)"
+        }
+      ],
+      "note": "word first recorded in English 1634; rules 'vary widely on a regional basis'",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Skittles_(sport)"
+      ]
+    },
+    {
+      "id": "ten-pin-bowling",
+      "name": "Ten-pin bowling",
+      "family": "target",
+      "year": 1810,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "nine-pin-bowling",
+          "kind": "descent",
+          "note": "ninepins with a tenth pin in a triangle. The usual story (added to dodge the 1841 Connecticut ban) fails on dates: see rejected.",
+          "source": "https://en.wikipedia.org/wiki/Ten-pin_bowling"
+        }
+      ],
+      "note": "painting of ten pins in a triangle, Ipswich, about 1810; US advertisement for a 'Ten Pin Alley' 1820; American Bowling Congress rules 9 September 1895",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ten-pin_bowling",
+        "https://en.wikipedia.org/wiki/Bowling",
+        "https://www.history.com/articles/bowling-history-egypt-to-america"
+      ]
+    },
+    {
+      "id": "candlepin-bowling",
+      "name": "Candlepin bowling",
+      "family": "target",
+      "year": 1880,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "ten-pin-bowling",
+          "kind": "descent",
+          "note": "source says only that it 'evolved from traditional pin bowling' in a bowling hall; ten-pin is my reading",
+          "source": "https://en.wikipedia.org/wiki/Candlepin_bowling"
+        }
+      ],
+      "note": "first played 1880 in Worcester, Massachusetts (Justin White, or John J. Monsey by another account); National Duckpin and Candlepin Congress set specifications 1906",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Candlepin_bowling"
+      ]
+    },
+    {
+      "id": "duckpin-bowling",
+      "name": "Duckpin bowling",
+      "family": "target",
+      "year": 1893,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "ten-pin-bowling",
+          "kind": "descent",
+          "note": "ten-pin with shorter pins, a small ball and three rolls a frame",
+          "source": "https://en.wikipedia.org/wiki/Duckpin_bowling"
+        }
+      ],
+      "note": "'duck pins' in the Boston Daily Globe, 2 January 1893; National Duckpin Bowling Congress 1927",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Duckpin_bowling"
+      ]
+    },
+    {
+      "id": "five-pin-bowling",
+      "name": "Five-pin bowling",
+      "family": "target",
+      "year": 1909,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "ten-pin-bowling",
+          "kind": "descent",
+          "note": "Ryan 'cut five tenpins down to about 75% of their size' and used hand-sized rubber balls",
+          "source": "https://en.wikipedia.org/wiki/Five-pin_bowling"
+        }
+      ],
+      "note": "invented about 1909 by Thomas F. Ryan at the Toronto Bowling Club",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Five-pin_bowling"
+      ]
+    },
+    {
+      "id": "bowls",
+      "name": "Bowls",
+      "family": "target",
+      "year": 1299,
+      "approx": false,
+      "ended": null,
+      "parents": [],
+      "note": "traced in England to the 13th century; Southampton green 1299; W. W. Mitchell's Manual of Bowls Playing 1864; Scottish Bowling Association 1892",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Bowls",
+        "https://en.wikipedia.org/wiki/Boules"
+      ]
+    },
+    {
+      "id": "bocce",
+      "name": "Bocce",
+      "family": "target",
+      "year": 1753,
+      "approx": false,
+      "ended": null,
+      "parents": [],
+      "note": "claimed Roman roots, no first date; first regulation in Raffaele Bisteghi's 'Gioco delle bocchie', 1753",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Bocce",
+        "https://en.wikipedia.org/wiki/Boules"
+      ]
+    },
+    {
+      "id": "jeu-provencal",
+      "name": "Jeu provençal",
+      "family": "target",
+      "year": 1850,
+      "approx": true,
+      "ended": null,
+      "parents": [],
+      "note": "19th-century southern France per Wikipedia's boules article; no firm first date or first rules found; three-step run-up on a 15-20 m pitch",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jeu_proven%C3%A7al",
+        "https://en.wikipedia.org/wiki/Boules"
+      ]
+    },
+    {
+      "id": "petanque",
+      "name": "Pétanque",
+      "family": "target",
+      "year": 1907,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "jeu-provencal",
+          "kind": "descent",
+          "note": "Ernest Pitiot adapted jeu provencal for Jules Lenoir, who could no longer run: feet planted in a circle, shorter pitch",
+          "source": "https://en.wikipedia.org/wiki/P%C3%A9tanque"
+        }
+      ],
+      "note": "devised at La Ciotat, 1907 (jeu provencal article) or 1910 (boules article); first tournament 1910; world federation FIPJP 1958",
+      "sources": [
+        "https://en.wikipedia.org/wiki/P%C3%A9tanque",
+        "https://en.wikipedia.org/wiki/Boules"
+      ]
+    },
+    {
+      "id": "curling",
+      "name": "Curling",
+      "family": "target",
+      "year": 1511,
+      "approx": false,
+      "ended": null,
+      "parents": [],
+      "note": "stone inscribed 1511 found at Dunblane; Paisley Abbey record February 1541; first official rules from the Grand (Royal) Caledonian Curling Club, founded 1838",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Curling",
+        "https://flemish.wp.st-andrews.ac.uk/?p=613"
+      ]
+    },
+    {
+      "id": "ultimate",
+      "name": "Ultimate",
+      "family": "target",
+      "year": 1968,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "american-football",
+          "kind": "influence",
+          "note": "Joel Silver learned a team disc game from Jared Kass, whose Amherst group (1965-66) built it 'based on concepts from American football, basketball, and soccer': scoring by a pass caught over a goal line (end zone)",
+          "source": "https://en.wikipedia.org/wiki/Ultimate_(sport)"
+        },
+        {
+          "id": "basketball",
+          "kind": "influence",
+          "note": "same passage: no travelling with the disc",
+          "source": "https://en.wikipedia.org/wiki/Ultimate_(sport)"
+        },
+        {
+          "id": "association-football",
+          "kind": "influence",
+          "note": "same passage; no specific element named",
+          "source": "https://en.wikipedia.org/wiki/Ultimate_(sport)"
+        }
+      ],
+      "note": "Columbia High School, Maplewood, New Jersey, 1968; first and second editions of the rules by Hellring, Silver and Hines 1970",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ultimate_(sport)",
+        "https://wfdf.sport/organisation/history/history-of-ultimate/"
+      ]
+    }
+  ],
+  "rejected": [
+    {
+      "child": "rugby-school-football",
+      "parent": "association-football",
+      "why": "William Webb Ellis picking up the ball in 1823 during a soccer-like game: the story first appeared in 1876 and was dismissed by the Old Rugbeian Society's 1895 inquiry; no fixed rules existed in his time",
+      "source": "https://en.wikipedia.org/wiki/History_of_rugby_union"
+    },
+    {
+      "child": "australian-rules-football",
+      "parent": "marn-grook",
+      "why": "Gillian Hibbins: 'lacks any intellectual credibility'; Wills's biographer finds only Rugby School influence. Backed by Flanagan, Poulter, Hutchinson and a 2019 AFL statement, but on circumstantial evidence",
+      "source": "https://en.wikipedia.org/wiki/Origins_of_Australian_rules_football"
+    },
+    {
+      "child": "australian-rules-football",
+      "parent": "gaelic-football",
+      "why": "Gaelic football was codified in 1885, 26 years after the Melbourne rules; Blainey, Sandercock and Turner reject any Irish origin and there is no archival evidence (O'Dwyer and Davis argued for it)",
+      "source": "https://en.wikipedia.org/wiki/Origins_of_Australian_rules_football"
+    },
+    {
+      "child": "australian-rules-football",
+      "parent": "caid",
+      "why": "same claim in its folk-football form; Blainey (1989) called it a myth",
+      "source": "https://en.wikipedia.org/wiki/Caid_(sport)"
+    },
+    {
+      "child": "association-football",
+      "parent": "cuju",
+      "why": "FIFA calls cuju the earliest documented kicking game, but it died out in the Ming era and no source shows any line from it to the English games",
+      "source": "https://en.wikipedia.org/wiki/Cuju"
+    },
+    {
+      "child": "association-football",
+      "parent": "calcio-storico",
+      "why": "rules written down in 1580 and the source of the Italian word for soccer, but the game lapsed in the 17th century and no source ties it to the English codes",
+      "source": "https://en.wikipedia.org/wiki/Calcio_storico_fiorentino"
+    },
+    {
+      "child": "medieval-football",
+      "parent": "harpastum",
+      "why": "Roman and Greek ball games are often named as the root of football; the sources only say they resembled it",
+      "source": "https://en.wikipedia.org/wiki/Football"
+    },
+    {
+      "child": "canadian-football",
+      "parent": "american-football",
+      "why": "Canadian football is not an offshoot of the American game: it was played under rugby rules from the 1860s and it was McGill that showed rugby to Harvard in 1874 (American influence on the 1903 rules is kept as a disputed edge)",
+      "source": "https://en.wikipedia.org/wiki/1874_Harvard_vs._McGill_football_game"
+    },
+    {
+      "child": "ice-hockey",
+      "parent": "hurling",
+      "why": "The Windsor, Nova Scotia 'birthplace' claim rests on 'hurly on the long pond' in an 1844 novel. The Society for International Hockey Research report (May 2002) found the proponents 'had not offered credible evidence'.",
+      "source": "https://en.wikipedia.org/wiki/Society_for_International_Hockey_Research"
+    },
+    {
+      "child": "ice-hockey",
+      "parent": "halifax-rules",
+      "why": "The Halifax Rules said to predate Montreal were written down in 1943 from memory; 'no contemporary sources confirm' them, so they cannot be shown as the source of the 1877 rules.",
+      "source": "https://en.wikipedia.org/wiki/Halifax_Rules"
+    },
+    {
+      "child": "ice-hockey",
+      "parent": "mikmaq-stick-games",
+      "why": "Mi'kmaq stick games on ice and Mi'kmaq stick carving are documented, but no opened source traces any 1875-77 rule to them; left out as an edge for lack of support, not because a historian refutes it.",
+      "source": "https://en.wikipedia.org/wiki/History_of_ice_hockey"
+    },
+    {
+      "child": "field-hockey",
+      "parent": "blackheath-rules",
+      "why": "Blackheath is the oldest club (1849) but refused the rules drawn up by Teddington and the other clubs and left to form the National Hockey Union, which failed; the modern rules are not Blackheath's.",
+      "source": "https://en.wikipedia.org/wiki/History_of_field_hockey"
+    },
+    {
+      "child": "folk-hockey",
+      "parent": "1363-proclamation",
+      "why": "The claim that Edward III banned 'hockey' in 1363 comes from a modern translation; the Latin has 'canibucam', rendered 'cambuck' in 1720.",
+      "source": "https://en.wikipedia.org/wiki/Hockey"
+    },
+    {
+      "child": "floorball",
+      "parent": "bandy",
+      "why": "The names innebandy and salibandy suggest indoor bandy, but the IFF traces the game to American Cosom plastic sticks; only the name and stick shape point to bandy (kept as a disputed influence, not descent).",
+      "source": "https://archive.floorball.sport/this-is-floorball/history-in-short/"
+    },
+    {
+      "child": "netball",
+      "parent": "newcomb-ball",
+      "why": "Clara Baer's misreading of Naismith's court diagram (her 1895 'basquette') is often given as netball's origin, including in Wikipedia's Netball article; History of netball ties that story only to US women's basketball and traces English netball to separate changes at Osterberg's college",
+      "source": "https://en.wikipedia.org/wiki/History_of_netball"
+    },
+    {
+      "child": "korfball",
+      "parent": "basketball",
+      "why": "korfball was not adapted from basketball directly; Broekhuysen's documented model was Swedish ringboll (which Dutch Wikipedia in turn derives from women's basketball)",
+      "source": "https://en.wikipedia.org/wiki/Nico_Broekhuysen"
+    },
+    {
+      "child": "volleyball",
+      "parent": "handball",
+      "why": "the 'handball' Morgan examined in 1895 cannot be team handball, whose first rules date from 1898-1906; it is the American wall game",
+      "source": "https://en.wikipedia.org/wiki/Handball"
+    },
+    {
+      "child": "badminton",
+      "parent": "poona",
+      "why": "Often told as badminton descending from a native Indian game called Poona. Wikipedia describes Poona as simply an early name for the officers' game, a variant of battledore and shuttlecock, taken from the garrison town where its first rules were written in 1873. No source opened describes a separate Indian game with that name.",
+      "source": "https://en.wikipedia.org/wiki/Badminton"
+    },
+    {
+      "child": "lawn-tennis",
+      "parent": "sphairistike-as-sole-origin",
+      "why": "Wingfield is popularly called the sole inventor. Gem and Perera were playing a rectangular-court lawn game by 1865, closer to the modern game than Wingfield's hourglass court; Wingfield's court, net height and scoring were all discarded by 1877.",
+      "source": "https://en.wikipedia.org/wiki/Harry_Gem"
+    },
+    {
+      "child": "padel",
+      "parent": "ship-deck-tennis",
+      "why": "The LTA repeats a story that padel goes back to a game on 19th-century British ships. The International Padel Federation's history starts in 1969 with Corcuera and names no earlier game.",
+      "source": "https://www.padelfip.com/history/"
+    },
+    {
+      "child": "baseball",
+      "parent": "rounders",
+      "why": "Henry Chadwick's theory. David Block showed 'base-ball' is recorded in England from 1744, rounders not before 1828; both come from English base-ball and rounders is the younger form. MLB historian John Thorn accepts only that they are 'close cousins'.",
+      "source": "https://en.wikipedia.org/wiki/Baseball_Before_We_Knew_It"
+    },
+    {
+      "child": "baseball",
+      "parent": "town-ball",
+      "why": "Chadwick: 'the New York game was improved townball'. Block treats town ball and the New York game as parallel regional forms of English base-ball, not parent and child.",
+      "source": "https://en.wikipedia.org/wiki/Origins_of_baseball"
+    },
+    {
+      "child": "baseball",
+      "parent": "cricket",
+      "why": "No historian opened derives baseball from cricket. Thorn: baseball, cricket and rounders 'are likely to be close cousins' but 'exactly how, or how closely, has not been established'; Block has cricket developing independently from stoolball.",
+      "source": "https://en.wikipedia.org/wiki/Origins_of_baseball"
+    },
+    {
+      "child": "baseball",
+      "parent": "schlagball",
+      "why": "German Wikipedia says emigrants took Schlagball to America as baseball's origin. Gutsmuths in 1796 described 'das englische Base-ball' as a separate game from the German one, so the English game already existed.",
+      "source": "https://en.wikipedia.org/wiki/Origins_of_baseball"
+    },
+    {
+      "child": "pesapallo",
+      "parent": "baseball",
+      "why": "Often called 'Finnish baseball' as if a baseball variant. It was built on Finnish kuningaspallo; baseball supplied only the bases and run scoring, so it is an influence edge, not descent.",
+      "source": "https://www.jyu.fi/tdk/museo/pesapallo_en/synty.htm"
+    },
+    {
+      "child": "table-billiards",
+      "parent": "croquet",
+      "why": "Order is backwards. Table billiards is recorded from the 1470s and has printed rules from 1674; croquet's first rules are 1856. Both come from ground billiards (Stein & Rubino, Shamos).",
+      "source": "https://en.wikipedia.org/wiki/Ground_billiards"
+    },
+    {
+      "child": "table-billiards",
+      "parent": "golf",
+      "why": "No source derives billiards from golf. Golf's tie to ground billiards is called 'not entirely certain'; billiards came from ground billiards moved onto a table.",
+      "source": "https://en.wikipedia.org/wiki/Ground_billiards"
+    },
+    {
+      "child": "ten-pin-bowling",
+      "parent": "nine-pin-bowling",
+      "why": "Rejects only the story, not the edge: ten-pin was not invented to dodge the 1841 Connecticut ninepins ban. Ten pins appear in an Ipswich painting about 1810 and a US advertisement in 1820, an 1838 newspaper already told the same tale about Baltimore, and the Connecticut law banned alleys 'whether more or less than ninepins were used'.",
+      "source": "https://en.wikipedia.org/wiki/Ten-pin_bowling"
+    },
+    {
+      "child": "golf",
+      "parent": "kolf",
+      "why": "Kolf is the indoor game that colf turned into around 1700, long after golf's 1457 record; the candidate ancestor is medieval colf, not kolf.",
+      "source": "https://en.wikipedia.org/wiki/Kolf"
+    }
+  ]
+}
