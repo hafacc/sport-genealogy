@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "name": "sport-genealogy",
+  "version": "0.1.0",
+  "description": "A family tree of ball sports: which game came from which, and when.",
+  "license": "MIT",
+  "type": "module",
+  "imports": {
+    "#lib/*": "./src/lib/*"
+  },
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "fmt": "biome check --write",
+    "lint": "svelte-kit sync && svelte-check --fail-on-warnings && biome check",
+    "poster": "bun src/poster.ts | rsvg-convert -f pdf -o poster.pdf"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.15",
+    "@fontsource-variable/nunito-sans": "^5.3.0",
+    "@sveltejs/adapter-static": "^4.0.0",
+    "@sveltejs/kit": "^3.0.1",
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^26.6.4",
+    "svelte": "^5.57.2",
+    "svelte-check": "^4.7.6",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.3"
+  }
+}

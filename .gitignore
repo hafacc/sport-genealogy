@@ -1,0 +1,9 @@
+# cache
+node_modules
+.svelte-kit
+build
+poster.pdf
+
+# editor / os cruft
+*.un~
+.DS_Store

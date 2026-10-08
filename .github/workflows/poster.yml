@@ -1,0 +1,27 @@
+name: poster
+
+# Manual-only: run from the Actions tab to publish a new copy of the poster.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+defaults:
+  run:
+    # naming the shell turns on pipefail, so a failed render fails the job
+    shell: bash
+
+jobs:
+  release:
+    # the poster is set in Avenir Next, which only macOS ships
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: oven-sh/setup-bun@v2
+      - run: brew install librsvg
+      - run: bun src/poster.ts | rsvg-convert -f pdf -o sport-genealogy-poster.pdf
+      # the site links to this file name on the latest release
+      - run: gh release create "poster-${{ github.run_number }}" sport-genealogy-poster.pdf --target "${{ github.sha }}" --notes "" --latest
+        env:
+          GH_TOKEN: ${{ github.token }}
