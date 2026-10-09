@@ -42,6 +42,7 @@ jobs:
       - run: brew install librsvg
       - run: bun src/poster.ts | rsvg-convert -f pdf -o sport-genealogy-poster.pdf
       # the site links to this file name on the latest release
-      - run: gh release create "poster-${{ github.run_number }}" sport-genealogy-poster.pdf --target "${{ github.sha }}" --notes "" --latest
+      # dated, because run numbers restart whenever the workflow is renamed
+      - run: gh release create "poster-$(date -u +%Y%m%d-%H%M%S)" sport-genealogy-poster.pdf --target "${{ github.sha }}" --notes "" --latest
         env:
           GH_TOKEN: ${{ github.token }}
