@@ -284,35 +284,146 @@ for (const children of childrenById.values()) {
   );
 }
 
-const rowById = new Map<string, number>();
-const headingRows: { family: Family; row: number }[] = [];
-let nextRow = 0;
-
-/** Give a sport and everything descended from it consecutive rows. */
-function assignRows(sport: Sport): void {
-  rowById.set(sport.id, nextRow);
-  nextRow += 1;
-  for (const child of lookup(childrenById, sport.id)) {
-    assignRows(child);
-  }
+/** The parentless sport at the top of a sport's tree. */
+function rootOf(sport: Sport): Sport {
+  const trunk = trunkParent(sport);
+  return trunk ? rootOf(lookup(sportById, trunk.id)) : sport;
 }
 
-for (const family of families) {
-  const roots = sports
-    .filter((sport) => sport.family === family.id && !trunkParent(sport))
-    .sort((first, second) => first.year - second.year);
-  if (roots.length > 0) {
-    nextRow += familyGapRows;
-    headingRows.push({ family, row: nextRow - 1.5 });
-    for (const root of roots) {
-      assignRows(root);
-      nextRow += treeGapRows;
+// A sport descended from two trees takes the second tree in below itself, so
+// the link between them stays short and crosses nothing.
+const guestRootsById = new Map<string, Sport[]>();
+const guestRoots = new Set<Sport>();
+for (const sport of sports) {
+  const trunk = trunkParent(sport);
+  for (const parent of sport.parents) {
+    const root = lookup(sportById, parent.id);
+    if (
+      parent !== trunk &&
+      parent.kind === "descent" &&
+      !trunkParent(root) &&
+      root.family === sport.family &&
+      rootOf(sport) !== root &&
+      !guestRoots.has(root)
+    ) {
+      guestRoots.add(root);
+      guestRootsById.set(sport.id, [
+        ...(guestRootsById.get(sport.id) ?? []),
+        root,
+      ]);
     }
   }
 }
 
+interface RowPlan {
+  /** row of each sport, by id */
+  rowById: Map<string, number>;
+  /** row of each family heading */
+  headingRows: { family: Family; row: number }[];
+  /** rows used, blank ones included */
+  rowCount: number;
+}
+
+/** Stack the families, giving each root and its descendants consecutive rows. */
+function planRows(rootsByFamily: Map<Family, Sport[]>): RowPlan {
+  const rowById = new Map<string, number>();
+  const headingRows: RowPlan["headingRows"] = [];
+  let nextRow = 0;
+
+  function assignRows(sport: Sport): void {
+    rowById.set(sport.id, nextRow);
+    nextRow += 1;
+    for (const child of lookup(childrenById, sport.id)) {
+      assignRows(child);
+    }
+    for (const guest of guestRootsById.get(sport.id) ?? []) {
+      assignRows(guest);
+    }
+  }
+
+  for (const [family, roots] of rootsByFamily) {
+    if (roots.length > 0) {
+      nextRow += familyGapRows;
+      headingRows.push({ family, row: nextRow - 1.5 });
+      for (const root of roots) {
+        assignRows(root);
+        nextRow += treeGapRows;
+      }
+    }
+  }
+  return { rowById, headingRows, rowCount: nextRow };
+}
+
+// links inside a family count extra, so its related trees end up adjacent
+const sameFamilyWeight = 4;
+
+/** Total rows spanned by the links that leave a sport's own tree. */
+function branchLength({ rowById }: RowPlan): number {
+  let total = 0;
+  for (const sport of sports) {
+    const trunk = trunkParent(sport);
+    for (const parent of sport.parents) {
+      if (parent !== trunk) {
+        const rows = Math.abs(
+          lookup(rowById, sport.id) - lookup(rowById, parent.id),
+        );
+        const sameFamily = lookup(sportById, parent.id).family === sport.family;
+        total += rows * (sameFamily ? sameFamilyWeight : 1);
+      }
+    }
+  }
+  return total;
+}
+
+/** Reorder the roots within each family until no single move shortens the links. */
+function shortestPlan(rootsByFamily: Map<Family, Sport[]>): RowPlan {
+  let best = planRows(rootsByFamily);
+  let bestLength = branchLength(best);
+  let improved = true;
+  while (improved) {
+    improved = false;
+    for (const [family, roots] of rootsByFamily) {
+      for (let from = 0; from < roots.length; from += 1) {
+        for (let to = 0; to < roots.length; to += 1) {
+          const moved = roots.toSpliced(from, 1).toSpliced(to, 0, roots[from]);
+          const plan = planRows(new Map(rootsByFamily).set(family, moved));
+          const length = branchLength(plan);
+          if (length < bestLength) {
+            rootsByFamily.set(family, moved);
+            roots.splice(0, roots.length, ...moved);
+            best = plan;
+            bestLength = length;
+            improved = true;
+          }
+        }
+      }
+    }
+  }
+  return best;
+}
+
+const {
+  rowById,
+  headingRows,
+  rowCount: plannedRows,
+} = shortestPlan(
+  new Map(
+    families.map((family) => [
+      family,
+      sports
+        .filter(
+          (sport) =>
+            sport.family === family.id &&
+            !trunkParent(sport) &&
+            !guestRoots.has(sport),
+        )
+        .sort((first, second) => first.year - second.year),
+    ]),
+  ),
+);
+
 /** Number of rows the chart needs, blank ones included. */
-export const rowCount = nextRow;
+export const rowCount = plannedRows;
 
 /** Stroke color of a sport's family. */
 export function colorOf(sport: Sport): string {

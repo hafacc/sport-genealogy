@@ -15,6 +15,21 @@
   },
   "families": [
     {
+      "id": "bat-and-ball",
+      "name": "Bat and ball",
+      "color": "#3f7d12"
+    },
+    {
+      "id": "racket-and-wall",
+      "name": "Racket and wall",
+      "color": "#4a3aa7"
+    },
+    {
+      "id": "court",
+      "name": "Hand and net",
+      "color": "#0f9a6a"
+    },
+    {
       "id": "football",
       "name": "Football",
       "color": "#1f66c1"
@@ -23,21 +38,6 @@
       "id": "stick-and-ball",
       "name": "Stick and ball",
       "color": "#d9541e"
-    },
-    {
-      "id": "court",
-      "name": "Hand and net",
-      "color": "#0f9a6a"
-    },
-    {
-      "id": "racket-and-wall",
-      "name": "Racket and wall",
-      "color": "#4a3aa7"
-    },
-    {
-      "id": "bat-and-ball",
-      "name": "Bat and ball",
-      "color": "#3f7d12"
     },
     {
       "id": "target",
@@ -2418,7 +2418,15 @@
       "year": 1903,
       "approx": true,
       "ended": 1922,
-      "parents": [],
+      "parents": [
+        {
+          "id": "long-ball",
+          "kind": "descent",
+          "disputed": true,
+          "note": "the pesäpallo museum groups kuningaspallo, långboll, Schlagball and lapta as 'different games with the same origin'; no evidence is given",
+          "source": "https://www.jyu.fi/tdk/museo/pesapallo_en/synty.htm"
+        }
+      ],
       "note": "rules first published in Finnish 1903; Pihkala's sharpened version 'pitkapallo' published 1915; replaced by pesapallo 1922. Closest equivalents: Swedish langboll, German Schlagball, Russian lapta.",
       "sources": [
         "https://www.jyu.fi/tdk/museo/pesapallo_en/synty.htm",
@@ -2460,7 +2468,15 @@
       "year": 1350,
       "approx": true,
       "ended": null,
-      "parents": [],
+      "parents": [
+        {
+          "id": "long-ball",
+          "kind": "descent",
+          "disputed": true,
+          "note": "the pesäpallo museum groups kuningaspallo, långboll, Schlagball and lapta as 'different games with the same origin'; no evidence is given",
+          "source": "https://www.jyu.fi/tdk/museo/pesapallo_en/synty.htm"
+        }
+      ],
       "note": "bats and balls in 14th-century Novgorod layers; a printed rule booklet existed by 1915; first republic-level competition 1958; federation 1996",
       "sources": [
         "https://en.wikipedia.org/wiki/Lapta_(game)",
@@ -2474,7 +2490,15 @@
       "year": 1364,
       "approx": true,
       "ended": null,
-      "parents": [],
+      "parents": [
+        {
+          "id": "long-ball",
+          "kind": "descent",
+          "disputed": true,
+          "note": "the pesäpallo museum groups kuningaspallo, långboll, Schlagball and lapta as 'different games with the same origin'; no evidence is given",
+          "source": "https://www.jyu.fi/tdk/museo/pesapallo_en/synty.htm"
+        }
+      ],
       "note": "possible 1364 mention; first firm reference 1782; school rules and first national competition 1899 under Spiru Haret; federation 1932",
       "sources": [
         "https://en.wikipedia.org/wiki/Oin%C4%83"
@@ -2487,7 +2511,15 @@
       "year": 1796,
       "approx": false,
       "ended": null,
-      "parents": [],
+      "parents": [
+        {
+          "id": "long-ball",
+          "kind": "descent",
+          "disputed": true,
+          "note": "the pesäpallo museum groups kuningaspallo, långboll, Schlagball and lapta as 'different games with the same origin'; no evidence is given",
+          "source": "https://www.jyu.fi/tdk/museo/pesapallo_en/synty.htm"
+        }
+      ],
       "note": "described by GutsMuths 1796 as 'das deutsche Ballspiel'; unified rules 1934/36; last German championship 1954; survives in a few cities and on Langeoog and Spiekeroog",
       "sources": [
         "https://de.wikipedia.org/wiki/Schlagball"
@@ -2828,6 +2860,12 @@
           "kind": "descent",
           "note": "PDGA: throw from a tee toward a target in the fewest throws, scored as in golf; Wikipedia: 'rules similar to golf'",
           "source": "https://www.pdga.com/history"
+        },
+        {
+          "id": "flying-disc",
+          "kind": "descent",
+          "note": "played with the Frisbee from the start; Wham-O's Ed Headrick ran a Frisbee golf tournament in 1965 and patented the target in 1976",
+          "source": "https://en.wikipedia.org/wiki/History_of_disc_golf"
         }
       ],
       "note": "isolated play earlier; Rice University tournaments by 1964; first permanent course Oak Grove, Pasadena 1975; Ed Headrick founded the DGA and PDGA in 1976 to formalize it",
@@ -3164,7 +3202,15 @@
       "year": 1299,
       "approx": false,
       "ended": null,
-      "parents": [],
+      "parents": [
+        {
+          "id": "boules",
+          "kind": "descent",
+          "disputed": true,
+          "note": "Wikipedia's boules article traces these games to the Roman target game but flags the passage as lacking citations",
+          "source": "https://en.wikipedia.org/wiki/Boules"
+        }
+      ],
       "note": "traced in England to the 13th century; Southampton green 1299; W. W. Mitchell's Manual of Bowls Playing 1864; Scottish Bowling Association 1892",
       "sources": [
         "https://en.wikipedia.org/wiki/Bowls",
@@ -3178,7 +3224,15 @@
       "year": 1753,
       "approx": false,
       "ended": null,
-      "parents": [],
+      "parents": [
+        {
+          "id": "boules",
+          "kind": "descent",
+          "disputed": true,
+          "note": "Wikipedia's boules article traces these games to the Roman target game but flags the passage as lacking citations",
+          "source": "https://en.wikipedia.org/wiki/Boules"
+        }
+      ],
       "note": "claimed Roman roots, no first date; first regulation in Raffaele Bisteghi's 'Gioco delle bocchie', 1753",
       "sources": [
         "https://en.wikipedia.org/wiki/Bocce",
@@ -3192,7 +3246,15 @@
       "year": 1850,
       "approx": true,
       "ended": null,
-      "parents": [],
+      "parents": [
+        {
+          "id": "boules",
+          "kind": "descent",
+          "disputed": true,
+          "note": "Wikipedia's boules article traces these games to the Roman target game but flags the passage as lacking citations",
+          "source": "https://en.wikipedia.org/wiki/Boules"
+        }
+      ],
       "note": "19th-century southern France per Wikipedia's boules article; no firm first date or first rules found; three-step run-up on a 15-20 m pitch",
       "sources": [
         "https://en.wikipedia.org/wiki/Jeu_proven%C3%A7al",
@@ -3243,6 +3305,12 @@
       "ended": null,
       "parents": [
         {
+          "id": "flying-disc",
+          "kind": "descent",
+          "note": "the Amherst and Columbia High School games were built around the Frisbee; Wham-O supplied the first team's discs",
+          "source": "https://wfdf.sport/organisation/history/history-of-ultimate/"
+        },
+        {
           "id": "american-football",
           "kind": "influence",
           "note": "Joel Silver learned a team disc game from Jared Kass, whose Amherst group (1965-66) built it 'based on concepts from American football, basketball, and soccer': scoring by a pass caught over a goal line (end zone)",
@@ -3265,6 +3333,267 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Ultimate_(sport)",
         "https://wfdf.sport/organisation/history/history-of-ultimate/"
+      ]
+    },
+    {
+      "id": "knattleikr",
+      "name": "Knattleikr",
+      "family": "stick-and-ball",
+      "year": 950,
+      "approx": true,
+      "ended": 1300,
+      "parents": [],
+      "note": "Viking stick-and-ball game in seven Icelandic sagas; no rules or equipment survive; any link to hurling or lacrosse rests on resemblance alone",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Knattleikr",
+        "https://hurstwic.com/history/articles/daily_living/text/knattleikr.htm"
+      ]
+    },
+    {
+      "id": "mesoamerican-ballgame",
+      "name": "Mesoamerican ballgame",
+      "family": "court",
+      "year": -1650,
+      "approx": true,
+      "ended": 1521,
+      "parents": [],
+      "note": "oldest rubber balls about 1700-1600 BCE at El Manatí; oldest court about 1400 BCE at Paso de la Amada; suppressed by the Spanish after the conquest",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mesoamerican_ballgame"
+      ]
+    },
+    {
+      "id": "ulama",
+      "name": "Ulama",
+      "family": "court",
+      "year": 1521,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "mesoamerican-ballgame",
+          "kind": "descent",
+          "note": "Wikipedia: 'a descendant of the Aztec version of the Mesoamerican ballgame'; it survived where Spanish influence was weaker",
+          "source": "https://en.wikipedia.org/wiki/Ulama_(game)"
+        }
+      ],
+      "note": "the Aztec game as it survived in Sinaloa; played with the hip, the forearm or a paddle",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ulama_(game)"
+      ]
+    },
+    {
+      "id": "long-ball",
+      "name": "Long ball",
+      "family": "bat-and-ball",
+      "year": 1300,
+      "approx": true,
+      "ended": null,
+      "parents": [],
+      "note": "bat-and-ball games where the batter runs to a line and back; a Finnish museum calls the regional forms 'different games with the same origin' but gives no evidence",
+      "sources": [
+        "https://www.jyu.fi/tdk/museo/pesapallo_en/synty.htm",
+        "https://en.wikipedia.org/wiki/Origins_of_baseball"
+      ]
+    },
+    {
+      "id": "boules",
+      "name": "Boules",
+      "family": "target",
+      "year": -500,
+      "approx": true,
+      "ended": null,
+      "parents": [],
+      "note": "Greeks threw stone balls for distance; Romans added a target to land near",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Boules"
+      ]
+    },
+    {
+      "id": "flying-disc",
+      "name": "Flying disc",
+      "family": "target",
+      "year": 1948,
+      "approx": false,
+      "ended": null,
+      "parents": [],
+      "note": "Fred Morrison's first plastic discs, 1948; sold to Wham-O 1957 and named Frisbee that June",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Frisbee"
+      ]
+    },
+    {
+      "id": "guts",
+      "name": "Guts",
+      "family": "target",
+      "year": 1958,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "flying-disc",
+          "kind": "descent",
+          "note": "a throw-and-catch contest played with the Frisbee itself",
+          "source": "https://en.wikipedia.org/wiki/Guts_(flying_disc_game)"
+        }
+      ],
+      "note": "invented by the Healy brothers; main event of their International Frisbee Tournament, first held at Eagle Harbor, Michigan, 1958",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Guts_(flying_disc_game)",
+        "https://discsportshistory.com/guts-frisbee-history"
+      ]
+    },
+    {
+      "id": "dodgeball",
+      "name": "Dodgeball",
+      "family": "court",
+      "year": 1905,
+      "approx": true,
+      "ended": null,
+      "parents": [],
+      "note": "no documented origin; the usual story has Philip Ferguson of Yale writing the first rules in 1905, but has no firm source; world championships since 2012",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Dodgeball"
+      ]
+    },
+    {
+      "id": "broomball",
+      "name": "Broomball",
+      "family": "stick-and-ball",
+      "year": 1909,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "ice-hockey",
+          "kind": "influence",
+          "note": "Wikipedia: 'tactics and plays are similar to those used in sports such as ice hockey'; no source says the rules were taken from it",
+          "source": "https://en.wikipedia.org/wiki/Broomball"
+        }
+      ],
+      "note": "first documented Canadian game at Perdue, Saskatchewan, 5 March 1909; played on ice in shoes, with tactics close to ice hockey's",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Broomball"
+      ]
+    },
+    {
+      "id": "shuffleboard",
+      "name": "Shuffleboard",
+      "family": "target",
+      "year": 1541,
+      "approx": true,
+      "ended": null,
+      "parents": [],
+      "note": "Henry VIII played 'shovillabourde'; shove-groat was banned by name in 1541; the deck game came ashore at Daytona Beach in 1913",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Shuffleboard"
+      ]
+    },
+    {
+      "id": "boccia",
+      "name": "Boccia",
+      "family": "target",
+      "year": 1984,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "bocce",
+          "kind": "descent",
+          "note": "Wikipedia: 'a Paralympic variant of bocce (boules)'",
+          "source": "https://en.wikipedia.org/wiki/Boccia"
+        }
+      ],
+      "note": "a form of bocce designed for players with cerebral palsy; Paralympic sport since 1984",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Boccia"
+      ]
+    },
+    {
+      "id": "goalball",
+      "name": "Goalball",
+      "family": "court",
+      "year": 1946,
+      "approx": false,
+      "ended": null,
+      "parents": [],
+      "note": "devised in 1946 by Hans Lorenzen and Sepp Reindle for blinded war veterans; Paralympic sport since 1976",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Goalball"
+      ]
+    },
+    {
+      "id": "wheelchair-basketball",
+      "name": "Wheelchair basketball",
+      "family": "court",
+      "year": 1946,
+      "approx": false,
+      "ended": null,
+      "parents": [
+        {
+          "id": "basketball",
+          "kind": "descent",
+          "note": "basketball played in wheelchairs, begun among American veterans at the University of Illinois",
+          "source": "https://en.wikipedia.org/wiki/Wheelchair_basketball"
+        }
+      ],
+      "note": "first played by American war veterans in 1946; at the Stoke Mandeville Games from 1956; Paralympic sport since 1960",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wheelchair_basketball"
+      ]
+    },
+    {
+      "id": "footbag",
+      "name": "Footbag",
+      "family": "court",
+      "year": 1972,
+      "approx": false,
+      "ended": null,
+      "parents": [],
+      "note": "invented in 1972 by Mike Marshall and John Stalberger in Oregon City as the Hacky Sack; trademark sold to Wham-O in 1983",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Footbag"
+      ]
+    },
+    {
+      "id": "cuju",
+      "name": "Cuju",
+      "family": "football",
+      "year": -300,
+      "approx": true,
+      "ended": 1644,
+      "parents": [],
+      "note": "first named in the Zhan Guo Ce; flourished under the Song, 960-1279; faded away under the Ming",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Cuju"
+      ]
+    },
+    {
+      "id": "pelota-mixteca",
+      "name": "Pelota mixteca",
+      "family": "racket-and-wall",
+      "year": 1600,
+      "approx": true,
+      "ended": null,
+      "parents": [
+        {
+          "id": "jeu-de-paume",
+          "kind": "descent",
+          "disputed": true,
+          "note": "Heiner Gillmeister (1997) derives it from a Franco-Flemish ancestor of real tennis, by way of games like Basque pelota; Tony Collins agrees",
+          "source": "https://en.wikipedia.org/wiki/Pelota_mixteca"
+        },
+        {
+          "id": "mesoamerican-ballgame",
+          "kind": "descent",
+          "disputed": true,
+          "note": "'claimed by many writers to be a descendant' of the Mesoamerican ballgame (Taladoire 2003), perhaps the form on the Dainzu reliefs",
+          "source": "https://en.wikipedia.org/wiki/Pelota_mixteca"
+        }
+      ],
+      "note": "glove ball game of Oaxaca and Guerrero; many writers trace it to the Mesoamerican ballgame, Heiner Gillmeister to a European ancestor of real tennis",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Pelota_mixteca"
       ]
     }
   ],
@@ -3442,6 +3771,36 @@
       "parent": "kolf",
       "why": "Kolf is the indoor game that colf turned into around 1700, long after golf's 1457 record; the candidate ancestor is medieval colf, not kolf.",
       "source": "https://en.wikipedia.org/wiki/Kolf"
+    },
+    {
+      "child": "hurling",
+      "parent": "knattleikr",
+      "why": "Often called a relative of hurling or shinty; the rules are lost and Hurstwic finds 'nothing suggests that these games derive from knattleikr'",
+      "source": "https://hurstwic.com/history/articles/daily_living/text/knattleikr.htm"
+    },
+    {
+      "child": "lacrosse",
+      "parent": "knattleikr",
+      "why": "Ebbe Hertzberg proposed the link in 1904; there is no strong evidence of any historical connection",
+      "source": "https://muse.jhu.edu/article/597542"
+    },
+    {
+      "child": "association-football",
+      "parent": "mesoamerican-ballgame",
+      "why": "FIFA's president called it among 'the oldest historical precursors to modern football'; no source shows the game reaching European sport",
+      "source": "https://en.wikipedia.org/wiki/Mesoamerican_ballgame"
+    },
+    {
+      "child": "cricket",
+      "parent": "long-ball",
+      "why": "cricket's batter also runs to a point and back, but no source ties it to lapta or the continental games; its pre-1650 history is unknown",
+      "source": "https://en.wikipedia.org/wiki/Origins_of_baseball"
+    },
+    {
+      "child": "ultimate",
+      "parent": "guts",
+      "why": "guts came first but no source says ultimate or disc golf took anything from it; they share only the disc",
+      "source": "https://en.wikipedia.org/wiki/Flying_disc_games"
     }
   ]
 }

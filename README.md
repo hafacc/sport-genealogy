@@ -22,9 +22,7 @@ bun run poster  # render poster.pdf; needs librsvg and macOS for Avenir Next
 
 ## Publishing
 
-Both are run by hand from the Actions tab:
-
-- **deploy** builds the site and publishes it to GitHub Pages. In the repository
-  settings, Pages must have its source set to **GitHub Actions**.
-- **poster** renders the PDF and attaches it to a new release. The site's download
-  link always points at the latest release.
+The **publish** workflow is run by hand from the Actions tab. It builds the site and
+publishes it to GitHub Pages, then renders the poster PDF and attaches it to a new
+release. The site's download link always points at the latest release. In the
+repository settings, Pages must have its source set to **GitHub Actions**.
