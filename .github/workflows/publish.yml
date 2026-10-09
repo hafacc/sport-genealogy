@@ -1,21 +1,41 @@
-name: poster
+name: publish
 
-# Manual-only: run from the Actions tab to publish a new copy of the poster.
 on:
   workflow_dispatch:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
-defaults:
-  run:
-    # naming the shell turns on pipefail, so a failed render fails the job
-    shell: bash
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  release:
+  build:
+    uses: ./.github/workflows/build.yml
+    with:
+      upload-pages: true
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
+
+  poster:
+    needs: build
     # the poster is set in Avenir Next, which only macOS ships
     runs-on: macos-latest
+    defaults:
+      run:
+        # naming the shell turns on pipefail, so a failed render fails the job
+        shell: bash
     steps:
       - uses: actions/checkout@v7
       - uses: oven-sh/setup-bun@v2
