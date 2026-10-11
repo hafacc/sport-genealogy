@@ -1,4 +1,5 @@
 <script lang="ts">
+  import type { Direction } from "./chart.ts";
   import { sportById } from "./chart.ts";
   import SportCard from "./SportCard.svelte";
   import Tree from "./Tree.svelte";
@@ -6,6 +7,8 @@
   // unknown until the page is running in a browser
   let measuredWidth = $state<number>();
   let selectedId = $state<string | null>(null);
+  // kept from one pick to the next
+  let direction = $state<Direction>("ancestors");
   let card = $state<HTMLElement>();
 
   const selected = $derived(selectedId ? sportById.get(selectedId) : undefined);
@@ -42,6 +45,7 @@
     <Tree
       width={measuredWidth}
       {selectedId}
+      {direction}
       onselect={(id) => (selectedId = id)}
     />
   {:else}
@@ -57,6 +61,8 @@
   >
     <SportCard
       sport={selected}
+      {direction}
+      ondirection={(next) => (direction = next)}
       onclose={() => (selectedId = null)}
       onselect={(id) => (selectedId = id)}
     />
