@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { SportMark } from "./chart.ts";
+  import type { Direction, SportMark } from "./chart.ts";
   import {
     dotRadius,
     layoutChart,
@@ -13,11 +13,18 @@
     width: number;
     /** id of the sport whose family line is picked out */
     selectedId?: string | null;
+    /** which way the family line is followed from the picked sport */
+    direction?: Direction;
     /** called with the sport that was picked, or null to clear; omit for a chart that can't be clicked */
     onselect?: (id: string | null) => void;
   }
 
-  let { width, selectedId = null, onselect }: Props = $props();
+  let {
+    width,
+    selectedId = null,
+    direction = "ancestors",
+    onselect,
+  }: Props = $props();
 
   const rowHeight = 22;
   const labelSize = 12.5;
@@ -43,7 +50,7 @@
 
   const lineage = $derived.by(() => {
     const selected = selectedId ? sportById.get(selectedId) : undefined;
-    return selected ? lineageOf(selected) : null;
+    return selected ? lineageOf(selected, direction) : null;
   });
 
   // outlives the pick, so the copy drawn on top can stay put while the rest fades back in

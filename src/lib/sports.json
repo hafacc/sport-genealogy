@@ -5,6 +5,10 @@
     "download": "Download the poster",
     "wikipedia": "Wikipedia",
     "close": "Close summary",
+    "direction": {
+      "ancestors": "Came from",
+      "descendants": "Led to"
+    },
     "legend": {
       "descent": "Rules came from this sport",
       "influence": "Borrowed something from this sport",
