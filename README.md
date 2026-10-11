@@ -7,10 +7,10 @@ history, and a 24 × 36 inch poster.
 ```sh
 bun install
 bun dev         # preview the site at http://localhost:5173
-bun run build   # write the static site to build/
+bun export   # write the static site to build/
 bun lint        # type-check and lint
 bun fmt         # format
-bun run poster  # render poster.pdf; needs librsvg and macOS for Avenir Next
+bun poster  # render poster.pdf; needs librsvg and macOS for Avenir Next
 ```
 
 ## Layout
