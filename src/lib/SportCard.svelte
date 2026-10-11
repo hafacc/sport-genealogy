@@ -3,11 +3,10 @@
   import {
     colorOf,
     copy,
-    dashOf,
     familyById,
     formatYears,
-    lineWidth,
     sportById,
+    strokeOf,
     wikipediaOf,
   } from "./chart.ts";
 
@@ -27,7 +26,7 @@
   const parents = $derived(
     sport.parents.flatMap((ref) => {
       const parent = sportById.get(ref.id);
-      return parent ? [{ ref, parent, ...dashOf(ref, false) }] : [];
+      return parent ? [{ ref, parent, ...strokeOf(ref, false) }] : [];
     }),
   );
 
@@ -74,7 +73,7 @@
   {/if}
   {#if parents.length > 0}
     <ul class="mt-3 flex flex-wrap gap-x-3.5 gap-y-1.5">
-      {#each parents as { ref, parent, dash, roundCap } (ref.id)}
+      {#each parents as { ref, parent, strokeWidth, dash, roundCap } (ref.id)}
         <li>
           <button
             class={[
@@ -92,7 +91,7 @@
                 y1="5"
                 y2="5"
                 stroke={colorOf(parent)}
-                stroke-width={ref.kind === "descent" ? lineWidth : 1.5}
+                stroke-width={strokeWidth}
                 stroke-dasharray={dash}
                 stroke-linecap={roundCap ? "round" : undefined}
               />
