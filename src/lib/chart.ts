@@ -221,6 +221,15 @@ const tickPriority = [
   1750, 1825,
 ];
 
+// gap between side links that rise next to each other
+const riseSpacing = 7;
+// how far left of a dot a rising link has to pass to clear it
+const riseClearance = 9;
+// what a side link pays, in lines crossed, to rise right beside another link
+const crowdedCost = 10;
+// what a side link pays, in lines crossed, per unit it runs level to reach its sport
+const runCost = 1 / 200;
+
 // rows of blank space, in units of one sport row
 const familyGapRows = 3.2;
 const treeGapRows = 0.6;
@@ -448,6 +457,11 @@ export function strokeOf(
   }
 }
 
+/** Hover text of a link. */
+function tooltipOf(parent: Sport, child: Sport, link: ParentRef): string {
+  return `${parent.name} → ${child.name}${link.note ? `: ${link.note}` : ""}`;
+}
+
 /** The sport's Wikipedia article, in English where there is one. */
 export function wikipediaOf(sport: Sport): string | undefined {
   const hosts = sport.sources.map((source) => new URL(source).hostname);
@@ -579,47 +593,6 @@ export function layoutChart(options: ChartOptions): ChartLayout {
     y: margin.top + row * rowHeight,
   }));
 
-  const branchEdges: Edge[] = [];
-  const trunkEdges: Edge[] = [];
-  for (const sport of sports) {
-    const trunk = trunkParent(sport);
-    const childX = startX(sport);
-    const childY = yOf(sport);
-    let branchCount = 0;
-    for (const parentRef of sport.parents) {
-      const parent = lookup(sportById, parentRef.id);
-      const parentY = yOf(parent);
-      const tooltip = `${parent.name} → ${sport.name}${parentRef.note ? `: ${parentRef.note}` : ""}`;
-      const shared = { parent, child: sport, color: colorOf(parent), tooltip };
-      if (parentRef === trunk) {
-        const turn = Math.min(9, (childY - parentY) / 2);
-        // a parent that died out first is joined from the end of its line
-        const leadX = Math.min(childX - turn, endX(parent));
-        trunkEdges.push({
-          ...shared,
-          path: `M${leadX.toFixed(1)},${parentY.toFixed(1)} L${(childX - turn).toFixed(1)},${parentY.toFixed(1)} Q${childX.toFixed(1)},${parentY.toFixed(1)} ${childX.toFixed(1)},${(parentY + turn).toFixed(1)} L${childX.toFixed(1)},${childY.toFixed(1)}`,
-          ...strokeOf(parentRef, true),
-        });
-      } else {
-        branchCount += 1;
-        const riseX = childX - 4 - 7 * branchCount;
-        // a parent that died out or began later is joined by a level run
-        const leaveX = Math.min(Math.max(riseX, startX(parent)), endX(parent));
-        const direction = Math.sign(childY - parentY);
-        const turn = 7;
-        const run =
-          leaveX === riseX
-            ? `M${riseX.toFixed(1)},${parentY.toFixed(1)}`
-            : `M${leaveX.toFixed(1)},${parentY.toFixed(1)} L${(riseX - turn * Math.sign(riseX - leaveX)).toFixed(1)},${parentY.toFixed(1)} Q${riseX.toFixed(1)},${parentY.toFixed(1)} ${riseX.toFixed(1)},${(parentY + turn * direction).toFixed(1)}`;
-        branchEdges.push({
-          ...shared,
-          path: `${run} L${riseX.toFixed(1)},${(childY - turn * direction).toFixed(1)} Q${riseX.toFixed(1)},${childY.toFixed(1)} ${childX.toFixed(1)},${childY.toFixed(1)}`,
-          ...strokeOf(parentRef, false),
-        });
-      }
-    }
-  }
-
   const marks = sports.map((sport): SportMark => {
     const dotX = startX(sport);
     const estimate = labelWidth(sport, labelSize);
@@ -637,6 +610,139 @@ export function layoutChart(options: ChartOptions): ChartLayout {
       labelWidth: estimate,
     };
   });
+  const markById = new Map(marks.map((mark) => [mark.sport.id, mark]));
+
+  // upright and level stretches of the links placed so far
+  const rises: { x: number; top: number; bottom: number }[] = [];
+  const runs: { y: number; left: number; right: number }[] = [];
+
+  const trunkEdges: Edge[] = [];
+  for (const { sport, startX: childX, y: childY } of marks) {
+    const trunk = trunkParent(sport);
+    if (trunk) {
+      const parent = lookup(markById, trunk.id);
+      const turn = Math.min(9, (childY - parent.y) / 2);
+      // a parent that died out first is joined from the end of its line
+      const leadX = Math.min(childX - turn, parent.endX);
+      rises.push({ x: childX, top: parent.y, bottom: childY });
+      trunkEdges.push({
+        parent: parent.sport,
+        child: sport,
+        color: parent.color,
+        tooltip: tooltipOf(parent.sport, sport, trunk),
+        path: `M${leadX.toFixed(1)},${parent.y.toFixed(1)} L${(childX - turn).toFixed(1)},${parent.y.toFixed(1)} Q${childX.toFixed(1)},${parent.y.toFixed(1)} ${childX.toFixed(1)},${(parent.y + turn).toFixed(1)} L${childX.toFixed(1)},${childY.toFixed(1)}`,
+        ...strokeOf(trunk, true),
+      });
+    }
+  }
+
+  /** How much a side link would tangle with the chart if it rose at a given spot. */
+  function tangle(riseX: number, parent: SportMark, child: SportMark): number {
+    const top = Math.min(parent.y, child.y);
+    const bottom = Math.max(parent.y, child.y);
+    const linesCrossed = marks.filter(
+      (mark) =>
+        mark.y > top &&
+        mark.y < bottom &&
+        mark.startX - riseClearance < riseX &&
+        riseX <= mark.endX,
+    ).length;
+    const runsCrossed = runs.filter(
+      (run) =>
+        run.y > top && run.y < bottom && run.left < riseX && riseX < run.right,
+    ).length;
+    const risesCrossed = rises.filter(
+      (rise) =>
+        rise.x > riseX &&
+        rise.x < child.startX &&
+        rise.top < child.y &&
+        rise.bottom > child.y,
+    ).length;
+    const crowded = rises.some(
+      (rise) =>
+        Math.abs(rise.x - riseX) < riseSpacing &&
+        rise.top < bottom &&
+        rise.bottom > top,
+    );
+    return (
+      linesCrossed +
+      runsCrossed +
+      risesCrossed +
+      (crowded ? crowdedCost : 0) +
+      (child.startX - riseX) * runCost
+    );
+  }
+
+  const branchEdges: Edge[] = [];
+  for (const child of marks) {
+    const trunk = trunkParent(child.sport);
+    let branchCount = 0;
+    for (const parentRef of child.sport.parents) {
+      if (parentRef !== trunk) {
+        branchCount += 1;
+        const parent = lookup(markById, parentRef.id);
+        const direction = Math.sign(child.y - parent.y);
+        const turn = 7;
+        const nearX = child.startX - 4 - riseSpacing * branchCount;
+        const leftmost = parent.startX + 2 * dotRadius;
+        let riseX = nearX;
+        let path: string;
+        if (nearX < leftmost || nearX > parent.endX) {
+          // a parent that died out or began later is joined by a level run
+          const leaveX = Math.min(Math.max(nearX, parent.startX), parent.endX);
+          const run =
+            leaveX === nearX
+              ? `M${nearX.toFixed(1)},${parent.y.toFixed(1)}`
+              : `M${leaveX.toFixed(1)},${parent.y.toFixed(1)} L${(nearX - turn * Math.sign(nearX - leaveX)).toFixed(1)},${parent.y.toFixed(1)} Q${nearX.toFixed(1)},${parent.y.toFixed(1)} ${nearX.toFixed(1)},${(parent.y + turn * direction).toFixed(1)}`;
+          path = `${run} L${nearX.toFixed(1)},${(child.y - turn * direction).toFixed(1)} Q${nearX.toFixed(1)},${child.y.toFixed(1)} ${child.startX.toFixed(1)},${child.y.toFixed(1)}`;
+        } else {
+          // rise where the link tangles least: often left of the lines in between
+          const candidates = [
+            nearX,
+            ...marks
+              .filter(
+                (mark) =>
+                  (mark.y - parent.y) * (mark.y - child.y) < 0 &&
+                  mark.startX < nearX,
+              )
+              .flatMap((mark) =>
+                [0, 1, 2].map(
+                  (step) => mark.startX - riseClearance - riseSpacing * step,
+                ),
+              )
+              .filter((candidate) => candidate >= leftmost),
+          ];
+          let least = Number.POSITIVE_INFINITY;
+          for (const candidate of candidates) {
+            const cost = tangle(candidate, parent, child);
+            if (cost < least) {
+              least = cost;
+              riseX = candidate;
+            }
+          }
+          const arrive =
+            child.startX - riseX > 2 * turn
+              ? `${(riseX + turn).toFixed(1)},${child.y.toFixed(1)} L${child.startX.toFixed(1)},${child.y.toFixed(1)}`
+              : `${child.startX.toFixed(1)},${child.y.toFixed(1)}`;
+          path = `M${riseX.toFixed(1)},${parent.y.toFixed(1)} L${riseX.toFixed(1)},${(child.y - turn * direction).toFixed(1)} Q${riseX.toFixed(1)},${child.y.toFixed(1)} ${arrive}`;
+        }
+        rises.push({
+          x: riseX,
+          top: Math.min(parent.y, child.y),
+          bottom: Math.max(parent.y, child.y),
+        });
+        runs.push({ y: child.y, left: riseX, right: child.startX });
+        branchEdges.push({
+          parent: parent.sport,
+          child: child.sport,
+          color: parent.color,
+          tooltip: tooltipOf(parent.sport, child.sport, parentRef),
+          path,
+          ...strokeOf(parentRef, false),
+        });
+      }
+    }
+  }
 
   return {
     width,

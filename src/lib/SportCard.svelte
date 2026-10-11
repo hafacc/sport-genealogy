@@ -5,6 +5,7 @@
     copy,
     familyById,
     formatYears,
+    lineWidth,
     sportById,
     strokeOf,
     wikipediaOf,
