@@ -73,45 +73,6 @@
     {sport.name}
   </h2>
   <p class="mt-0.5 text-[0.9rem] text-muted-ink">{formatYears(sport)}</p>
-  {#if copy.direction}
-    <div class="mt-3 flex w-fit border-[1.5px] border-ink">
-      {#each directions as option (option)}
-        <button
-          class={[
-            "inline-flex cursor-pointer items-center gap-2 px-2.5 py-1 text-[0.86rem]",
-            option === direction
-              ? "bg-grid-ink font-bold"
-              : "font-semibold text-muted-ink",
-            focusRing,
-          ]}
-          type="button"
-          aria-pressed={option === direction}
-          onclick={() => ondirection(option)}
-        >
-          <!-- a line running into the sport's dot, or out of it -->
-          <svg
-            class={[
-              "h-2.5 w-[26px]",
-              option === "descendants" && "-scale-x-100",
-            ]}
-            viewBox="0 0 26 10"
-            aria-hidden="true"
-          >
-            <line
-              class="stroke-(--family)"
-              x1="0"
-              x2="21"
-              y1="5"
-              y2="5"
-              stroke-width={lineWidth}
-            />
-            <circle class="fill-(--family)" cx="21" cy="5" r="4" />
-          </svg>
-          {copy.direction[option]}
-        </button>
-      {/each}
-    </div>
-  {/if}
   {#if sport.note}
     <p class="mt-3 text-[0.94rem] leading-[1.45] first-letter:uppercase">
       {sport.note}
@@ -148,18 +109,59 @@
       {/each}
     </ul>
   {/if}
-  {#if wikipedia && copy.wikipedia}
-    <a
-      class={[
-        "mt-3.5 inline-block text-[0.94rem] font-bold underline decoration-2 underline-offset-4 hover:decoration-(color:--family)",
-        focusRing,
-      ]}
-      href={wikipedia}
-      target="_blank"
-      rel="noopener"
-    >
-      {copy.wikipedia}
-      <span aria-hidden="true">→</span>
-    </a>
-  {/if}
+  <div class="mt-3.5 flex flex-wrap items-center gap-x-4 gap-y-2">
+    {#if wikipedia && copy.wikipedia}
+      <a
+        class={[
+          "text-[0.94rem] font-bold underline decoration-2 underline-offset-4 hover:decoration-(color:--family)",
+          focusRing,
+        ]}
+        href={wikipedia}
+        target="_blank"
+        rel="noopener"
+      >
+        {copy.wikipedia}
+        <span aria-hidden="true">→</span>
+      </a>
+    {/if}
+    {#if copy.direction}
+      <div class="-mr-2 ml-auto flex">
+        {#each directions as option (option)}
+          <button
+            class={[
+              "inline-flex cursor-pointer items-center gap-1.5 px-2 py-1 text-[0.8rem] font-semibold",
+              option === direction
+                ? "bg-grid-ink/60"
+                : "text-muted-ink hover:text-ink",
+              focusRing,
+            ]}
+            type="button"
+            aria-pressed={option === direction}
+            onclick={() => ondirection(option)}
+          >
+            <!-- a line running into the sport's dot, or out of it -->
+            <svg
+              class={[
+                "h-2.5 w-[26px]",
+                option === "descendants" && "-scale-x-100",
+              ]}
+              viewBox="0 0 26 10"
+              aria-hidden="true"
+            >
+              <line
+                class="stroke-(--family)"
+                x1="0"
+                x2="21"
+                y1="5"
+                y2="5"
+                stroke-width={lineWidth}
+              />
+              <circle class="fill-(--family)" cx="21" cy="5" r="4" />
+            </svg>
+            {copy.direction[option]}
+          </button>
+        {/each}
+      </div>
+    {/if}
+  </div>
 </aside>
