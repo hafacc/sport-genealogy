@@ -46,12 +46,16 @@
     return selected ? lineageOf(selected) : null;
   });
 
-  const fade = "transition-opacity duration-200 motion-reduce:transition-none";
+  // outlives the pick, so the copy drawn on top can stay put while the rest fades back in
+  let lastLineage: Set<string> | null = null;
+  const topLineage = $derived.by(() => {
+    if (lineage) {
+      lastLineage = lineage;
+    }
+    return lastLineage;
+  });
 
-  /** Whether something belonging to these sports is outside the picked family line. */
-  function faded(...ids: string[]): boolean {
-    return lineage !== null && !ids.every((id) => lineage.has(id));
-  }
+  let hoveredId = $state<string | null>(null);
 
   /** Pick a sport, or clear it if it was already picked. */
   function toggle(id: string): void {
@@ -70,21 +74,12 @@
 {#snippet dotAndLabel(
   mark: SportMark,
 )}
-  {@const { sport, y, startX, color, years, labelX, labelAnchor, labelWidth } =
-    mark}
-  {@const labelLeft = labelAnchor === "end" ? labelX - labelWidth : labelX}
-  {@const hitLeft = Math.min(startX - 8, labelLeft)}
-  {@const hitRight = Math.max(startX + 8, labelLeft + labelWidth)}
-  <rect
-    class="fill-transparent group-focus-visible:stroke-ink group-focus-visible:stroke-[1.5px]"
-    x={hitLeft.toFixed(1)}
-    y={(y - 17).toFixed(1)}
-    width={(hitRight - hitLeft).toFixed(1)}
-    height={rowHeight}
-    rx="4"
-  />
+  {@const { sport, y, startX, color, years, labelX, labelAnchor } = mark}
   <circle
-    class="origin-center transition-transform duration-150 [transform-box:fill-box] group-hover:scale-145 group-aria-pressed:scale-145 motion-reduce:transition-none"
+    class={[
+      "origin-center transition-transform duration-150 [transform-box:fill-box] motion-reduce:transition-none",
+      (sport.id === hoveredId || sport.id === selectedId) && "scale-145",
+    ]}
     cx={startX.toFixed(1)}
     cy={y.toFixed(1)}
     r={dotRadius}
@@ -108,6 +103,60 @@
       {years}
     </tspan>
   </text>
+{/snippet}
+
+<!-- the whole chart, or only the part of it within one family line -->
+{#snippet drawing(
+  within: Set<string> | null,
+)}
+  <g fill="none">
+    {#each [
+      ...layout.branchEdges,
+      ...layout.trunkEdges,
+    ] as edge (`${edge.parent.id} ${edge.child.id}`)}
+      {#if !within || (within.has(edge.parent.id) && within.has(edge.child.id))}
+        <path
+          d={edge.path}
+          stroke={edge.color}
+          stroke-width={edge.strokeWidth}
+          stroke-dasharray={edge.dash}
+          stroke-linecap={edge.roundCap ? "round" : undefined}
+        >
+          <title>{edge.tooltip}</title>
+        </path>
+      {/if}
+    {/each}
+  </g>
+  <g stroke-width={lineWidth}>
+    {#each layout.marks as { sport, y, startX, endX, color } (sport.id)}
+      {#if !within || within.has(sport.id)}
+        <g stroke={color}>
+          <line
+            x1={startX.toFixed(1)}
+            x2={endX.toFixed(1)}
+            y1={y.toFixed(1)}
+            y2={y.toFixed(1)}
+          />
+          {#if sport.ended != null}
+            <line
+              x1={endX.toFixed(1)}
+              x2={endX.toFixed(1)}
+              y1={(y - 5).toFixed(1)}
+              y2={(y + 5).toFixed(1)}
+            />
+          {/if}
+        </g>
+      {/if}
+    {/each}
+  </g>
+  <!-- the buttons drawn over the chart already name each sport -->
+  <g aria-hidden={onselect ? "true" : undefined}>
+    {#each layout.marks as mark (mark.sport.id)}
+      {#if !within || within.has(mark.sport.id)}
+        {@render dotAndLabel(mark)}
+      {/if}
+    {/each}
+  </g>
 {/snippet}
 
 <svg
@@ -168,65 +217,49 @@
       {family.name}
     </text>
   {/each}
-  <g fill="none">
-    {#each [
-      ...layout.branchEdges,
-      ...layout.trunkEdges,
-    ] as edge (`${edge.parent.id} ${edge.child.id}`)}
-      <path
-        class={[fade, faded(edge.parent.id, edge.child.id) && "opacity-20"]}
-        d={edge.path}
-        stroke={edge.color}
-        stroke-width={edge.strokeWidth}
-        stroke-dasharray={edge.dash}
-        stroke-linecap={edge.roundCap ? "round" : undefined}
-      >
-        <title>{edge.tooltip}</title>
-      </path>
-    {/each}
+  <g
+    class={[
+      "transition-opacity duration-200 motion-reduce:transition-none",
+      lineage && "opacity-20",
+    ]}
+  >
+    {@render drawing(null)}
   </g>
-  <g stroke-width={lineWidth}>
-    {#each layout.marks as { sport, y, startX, endX, color } (sport.id)}
-      <g class={[fade, faded(sport.id) && "opacity-20"]} stroke={color}>
-        <line
-          x1={startX.toFixed(1)}
-          x2={endX.toFixed(1)}
-          y1={y.toFixed(1)}
-          y2={y.toFixed(1)}
-        />
-        {#if sport.ended != null}
-          <line
-            x1={endX.toFixed(1)}
-            x2={endX.toFixed(1)}
-            y1={(y - 5).toFixed(1)}
-            y2={(y + 5).toFixed(1)}
-          />
-        {/if}
-      </g>
-    {/each}
-  </g>
-  {#each layout.marks as mark (mark.sport.id)}
-    {@const { sport, years } = mark}
-    {#if onselect}
+  {#if topLineage}
+    <g
+      class={[
+        "pointer-events-none",
+        !lineage &&
+          "invisible transition-[visibility] delay-200 duration-0 motion-reduce:transition-none",
+      ]}
+      aria-hidden="true"
+    >
+      {@render drawing(topLineage)}
+    </g>
+  {/if}
+  {#if onselect}
+    {#each layout.marks as { sport, y, startX, years, labelX, labelAnchor, labelWidth } (sport.id)}
+      {@const labelLeft = labelAnchor === "end" ? labelX - labelWidth : labelX}
+      {@const hitLeft = Math.min(startX - 8, labelLeft)}
+      {@const hitRight = Math.max(startX + 8, labelLeft + labelWidth)}
       <!-- biome-ignore lint/a11y/useSemanticElements: SVG has no button element -->
-      <g
-        class={[
-          "group cursor-pointer outline-none",
-          fade,
-          faded(sport.id) && "opacity-20",
-        ]}
+      <rect
+        class="cursor-pointer fill-transparent outline-none focus-visible:stroke-ink focus-visible:stroke-[1.5px]"
         id="sport-{sport.id}"
+        x={hitLeft.toFixed(1)}
+        y={(y - 17).toFixed(1)}
+        width={(hitRight - hitLeft).toFixed(1)}
+        height={rowHeight}
+        rx="4"
         role="button"
         tabindex="0"
         aria-label="{sport.name}, {years}"
         aria-pressed={sport.id === selectedId}
         onclick={() => toggle(sport.id)}
         onkeydown={(event) => onkeydown(event, sport.id)}
-      >
-        {@render dotAndLabel(mark)}
-      </g>
-    {:else}
-      <g>{@render dotAndLabel(mark)}</g>
-    {/if}
-  {/each}
+        onpointerenter={() => (hoveredId = sport.id)}
+        onpointerleave={() => (hoveredId = null)}
+      />
+    {/each}
+  {/if}
 </svg>
