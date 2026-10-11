@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Sport } from "./chart.ts";
+  import type { Direction, Sport } from "./chart.ts";
   import {
     colorOf,
     copy,
@@ -13,13 +13,17 @@
   interface Props {
     /** sport to summarize */
     sport: Sport;
+    /** which way the chart follows the sport's family line */
+    direction: Direction;
+    /** called with the way to follow the family line instead */
+    ondirection: (direction: Direction) => void;
     /** called to dismiss the summary */
     onclose: () => void;
     /** called with the id of a parent sport to show instead */
     onselect: (id: string) => void;
   }
 
-  let { sport, onclose, onselect }: Props = $props();
+  let { sport, direction, ondirection, onclose, onselect }: Props = $props();
 
   const family = $derived(familyById.get(sport.family));
   const wikipedia = $derived(wikipediaOf(sport));
@@ -29,6 +33,8 @@
       return parent ? [{ ref, parent, ...strokeOf(ref, false) }] : [];
     }),
   );
+
+  const directions: Direction[] = ["ancestors", "descendants"];
 
   const focusRing =
     "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink";
@@ -66,6 +72,45 @@
     {sport.name}
   </h2>
   <p class="mt-0.5 text-[0.9rem] text-muted-ink">{formatYears(sport)}</p>
+  {#if copy.direction}
+    <div class="mt-3 flex w-fit border-[1.5px] border-ink">
+      {#each directions as option (option)}
+        <button
+          class={[
+            "inline-flex cursor-pointer items-center gap-2 px-2.5 py-1 text-[0.86rem]",
+            option === direction
+              ? "bg-grid-ink font-bold"
+              : "font-semibold text-muted-ink",
+            focusRing,
+          ]}
+          type="button"
+          aria-pressed={option === direction}
+          onclick={() => ondirection(option)}
+        >
+          <!-- a line running into the sport's dot, or out of it -->
+          <svg
+            class={[
+              "h-2.5 w-[26px]",
+              option === "descendants" && "-scale-x-100",
+            ]}
+            viewBox="0 0 26 10"
+            aria-hidden="true"
+          >
+            <line
+              class="stroke-(--family)"
+              x1="0"
+              x2="21"
+              y1="5"
+              y2="5"
+              stroke-width={lineWidth}
+            />
+            <circle class="fill-(--family)" cx="21" cy="5" r="4" />
+          </svg>
+          {copy.direction[option]}
+        </button>
+      {/each}
+    </div>
+  {/if}
   {#if sport.note}
     <p class="mt-3 text-[0.94rem] leading-[1.45] first-letter:uppercase">
       {sport.note}

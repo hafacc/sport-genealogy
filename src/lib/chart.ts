@@ -12,6 +12,8 @@ export interface Copy {
   wikipedia?: string;
   /** accessible name of the summary's close button */
   close?: string;
+  /** captions of the switch between the two ways to follow a family line */
+  direction?: Record<Direction, string>;
   /** legend captions, by mark */
   legend: Partial<Record<LegendKey, string>>;
   /** lines of small print at the foot of the poster */
@@ -463,34 +465,39 @@ function labelWidth(sport: Sport, labelSize: number): number {
   return nameWidth + 6 + yearsWidth;
 }
 
-/** The sport itself plus every sport it came from and every sport that came from it. */
-export function lineageOf(sport: Sport): Set<string> {
+/** Which way a picked sport's family line is followed. */
+export type Direction = "ancestors" | "descendants";
+
+/** The sport itself plus every sport it came from, or every sport that came from it. */
+export function lineageOf(sport: Sport, direction: Direction): Set<string> {
   const lineage = new Set<string>([sport.id]);
-  const ancestors = [sport];
-  for (const ancestor of ancestors) {
-    for (const { id } of ancestor.parents) {
-      if (!lineage.has(id)) {
-        lineage.add(id);
-        ancestors.push(lookup(sportById, id));
+  if (direction === "ancestors") {
+    const ancestors = [sport];
+    for (const ancestor of ancestors) {
+      for (const { id } of ancestor.parents) {
+        if (!lineage.has(id)) {
+          lineage.add(id);
+          ancestors.push(lookup(sportById, id));
+        }
+      }
+    }
+  } else {
+    // parents always begin earlier, but not always earlier in the file
+    let grew = true;
+    while (grew) {
+      grew = false;
+      for (const candidate of sports) {
+        if (
+          !lineage.has(candidate.id) &&
+          candidate.parents.some(({ id }) => lineage.has(id))
+        ) {
+          lineage.add(candidate.id);
+          grew = true;
+        }
       }
     }
   }
-  const descendants = new Set<string>([sport.id]);
-  // parents always begin earlier, but not always earlier in the file
-  let grew = true;
-  while (grew) {
-    grew = false;
-    for (const candidate of sports) {
-      if (
-        !descendants.has(candidate.id) &&
-        candidate.parents.some(({ id }) => descendants.has(id))
-      ) {
-        descendants.add(candidate.id);
-        grew = true;
-      }
-    }
-  }
-  return new Set<string>([...lineage, ...descendants]);
+  return lineage;
 }
 
 /**
