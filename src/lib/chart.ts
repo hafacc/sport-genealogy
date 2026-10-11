@@ -193,6 +193,8 @@ export const fontFamily =
   "'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif";
 export const lineWidth = 2.4;
 export const dotRadius = 4;
+// round caps turn each near-zero dash into a dot as wide as a line
+const disputedDash = "0.1 4.8";
 
 // [year, fraction of the plot width]; the 19th century gets most of the room
 const timeStops: [number, number][] = [
@@ -430,17 +432,17 @@ export function colorOf(sport: Sport): string {
   return lookup(familyById, sport.family).color;
 }
 
-/** Dash pattern for a link; solid when the descent is settled. */
-export function dashOf(
+/** Stroke of a link: solid for settled descent, dashed for borrowing, dotted when disputed. */
+export function strokeOf(
   parent: ParentRef,
   isTrunk: boolean,
-): Pick<Edge, "dash" | "roundCap"> {
+): Pick<Edge, "strokeWidth" | "dash" | "roundCap"> {
   if (parent.disputed) {
-    return { dash: "0.1 5", roundCap: true };
+    return { strokeWidth: lineWidth, dash: disputedDash, roundCap: true };
   } else if (parent.kind === "influence") {
-    return { dash: "7 4", roundCap: false };
+    return { strokeWidth: 1.5, dash: "7 4", roundCap: false };
   } else {
-    return { roundCap: !isTrunk };
+    return { strokeWidth: lineWidth, roundCap: !isTrunk };
   }
 }
 
@@ -589,8 +591,7 @@ export function layoutChart(options: ChartOptions): ChartLayout {
         trunkEdges.push({
           ...shared,
           path: `M${leadX.toFixed(1)},${parentY.toFixed(1)} L${(childX - turn).toFixed(1)},${parentY.toFixed(1)} Q${childX.toFixed(1)},${parentY.toFixed(1)} ${childX.toFixed(1)},${(parentY + turn).toFixed(1)} L${childX.toFixed(1)},${childY.toFixed(1)}`,
-          strokeWidth: lineWidth,
-          ...dashOf(parentRef, true),
+          ...strokeOf(parentRef, true),
         });
       } else {
         branchCount += 1;
@@ -606,8 +607,7 @@ export function layoutChart(options: ChartOptions): ChartLayout {
         branchEdges.push({
           ...shared,
           path: `${run} L${riseX.toFixed(1)},${(childY - turn * direction).toFixed(1)} Q${riseX.toFixed(1)},${childY.toFixed(1)} ${childX.toFixed(1)},${childY.toFixed(1)}`,
-          strokeWidth: parentRef.kind === "descent" ? lineWidth : 1.5,
-          ...dashOf(parentRef, false),
+          ...strokeOf(parentRef, false),
         });
       }
     }
@@ -660,7 +660,7 @@ export function legendEntries(): LegendEntry[] {
   const marks: Record<LegendKey, string> = {
     descent: `<path d="M0,-9 Q9,-9 9,0 L9,9 L${legendSwatch},9" fill="none" stroke="${ink}" stroke-width="${lineWidth}"/><circle cx="9" cy="9" r="${dotRadius}" fill="${ink}" stroke="${ink}" stroke-width="2"/>`,
     influence: `<path d="M22,-11 L22,2 Q22,9 29,9" fill="none" stroke="${ink}" stroke-width="1.5" stroke-dasharray="7 4"/><line x1="29" x2="${legendSwatch}" y1="9" y2="9" stroke="${ink}" stroke-width="${lineWidth}"/><circle cx="29" cy="9" r="${dotRadius}" fill="${ink}"/>`,
-    disputed: `<path d="M22,-11 L22,2 Q22,9 29,9" fill="none" stroke="${ink}" stroke-width="1.5" stroke-dasharray="0.1 5" stroke-linecap="round"/><line x1="29" x2="${legendSwatch}" y1="9" y2="9" stroke="${ink}" stroke-width="${lineWidth}"/><circle cx="29" cy="9" r="${dotRadius}" fill="${ink}"/>`,
+    disputed: `<path d="M22,-11 L22,2 Q22,9 29,9" fill="none" stroke="${ink}" stroke-width="${lineWidth}" stroke-dasharray="${disputedDash}" stroke-linecap="round"/><line x1="29" x2="${legendSwatch}" y1="9" y2="9" stroke="${ink}" stroke-width="${lineWidth}"/><circle cx="29" cy="9" r="${dotRadius}" fill="${ink}"/>`,
     approx: `<line x1="${legendSwatch / 2}" x2="${legendSwatch}" y1="0" y2="0" stroke="${ink}" stroke-width="${lineWidth}"/><circle cx="${legendSwatch / 2}" cy="0" r="${dotRadius}" fill="${paper}" stroke="${ink}" stroke-width="2"/>`,
     ended: `<line x1="0" x2="${legendSwatch / 2}" y1="0" y2="0" stroke="${ink}" stroke-width="${lineWidth}"/><line x1="${legendSwatch / 2}" x2="${legendSwatch / 2}" y1="-5" y2="5" stroke="${ink}" stroke-width="${lineWidth}"/>`,
   };
