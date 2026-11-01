@@ -78,9 +78,7 @@
   }
 </script>
 
-{#snippet dotAndLabel(
-  mark: SportMark,
-)}
+{#snippet dotAndLabel(mark: SportMark)}
   {@const { sport, y, startX, color, years, labelX, labelAnchor } = mark}
   <circle
     class={[
@@ -113,9 +111,7 @@
 {/snippet}
 
 <!-- the whole chart, or only the part of it within one family line -->
-{#snippet drawing(
-  within: Set<string> | null,
-)}
+{#snippet drawing(within: Set<string> | null)}
   <g fill="none">
     {#each [
       ...layout.branchEdges,
